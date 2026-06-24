@@ -26,6 +26,7 @@ export function SectionShell({
   return (
     <section
       id={id}
+      aria-label={title}
       className={[
         "flex scroll-mt-24 flex-col gap-4 rounded-md border border-stroke bg-bg-elevated p-4 lg:scroll-mt-10 lg:p-6",
         className,
@@ -33,14 +34,7 @@ export function SectionShell({
         .filter(Boolean)
         .join(" ")}
     >
-      <header className="flex flex-col gap-1">
-        <Tag className="self-start uppercase tracking-wider text-text-quaternary">
-          {field}
-        </Tag>
-        <h2 className="text-lg font-semibold tracking-tight text-text-primary lg:text-xl">
-          {title}
-        </h2>
-      </header>
+      <Tag className="self-start uppercase tracking-wider">{field}</Tag>
 
       <Reveal>{children}</Reveal>
     </section>
