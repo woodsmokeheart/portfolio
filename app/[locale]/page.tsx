@@ -6,6 +6,8 @@ import { TitleSection } from "@/components/sections/title-section";
 import { DescriptionSection } from "@/components/sections/description-section";
 import { PreconditionsSection } from "@/components/sections/preconditions-section";
 import { StepsSection } from "@/components/sections/steps-section";
+import { ExpectedSection } from "@/components/sections/expected-section";
+import { ActualSection } from "@/components/sections/actual-section";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,6 +18,8 @@ const REAL_SECTIONS = new Set([
   "description",
   "preconditions",
   "steps",
+  "expected",
+  "actual",
 ]);
 
 export default function Home({ params }: Props) {
@@ -30,6 +34,8 @@ export default function Home({ params }: Props) {
       <DescriptionSection />
       <PreconditionsSection />
       <StepsSection />
+      <ExpectedSection />
+      <ActualSection />
 
       {SECTIONS.filter((section) => !REAL_SECTIONS.has(section.id)).map(
         (section) => (

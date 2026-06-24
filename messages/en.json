@@ -104,6 +104,43 @@
           "detail": "Leading teams, building QA processes and standards, driving shift-left and automation across the platform."
         }
       ]
+    },
+    "expected": {
+      "items": [
+        "Build a mature shift-left culture where quality is designed in at the requirements stage, not caught in production.",
+        "Scale automation so platform-wide regression runs itself, freeing hands for exploratory testing.",
+        "Grow a strong QA team — people who reason in risks, not just test cases.",
+        "Reduce defects that escape to production and cut incident response time (MTTR).",
+        "Give back: standards, articles, and talks that move the QA community forward."
+      ]
+    },
+    "actual": {
+      "items": [
+        {
+          "title": "QA process overhaul: two-cycle testing",
+          "sub": "Introduced smoke + e2e cycles and acceptance-criteria sign-off — defects surface earlier and releases got predictable.",
+          "tags": ["Process", "Shift-left", "Acceptance"],
+          "year": "2026"
+        },
+        {
+          "title": "Playwright automation framework",
+          "sub": "Stable UI and API suites in CI: regression moved into pipelines and manual grind dropped sharply.",
+          "tags": ["Playwright", "CI", "API"],
+          "year": "2025"
+        },
+        {
+          "title": "Release stabilization across 21 microservices",
+          "sub": "Coordinated testing of a distributed Go/Next.js/Kafka platform mid-migration to Kubernetes.",
+          "tags": ["Go", "Kafka", "Kubernetes"],
+          "year": "2025"
+        },
+        {
+          "title": "Observability-driven incident triage",
+          "sub": "Reproduced and localized defects from Grafana logs and Kafka events — from symptom to root cause.",
+          "tags": ["Grafana", "Observability", "Incident"],
+          "year": "2024"
+        }
+      ]
     }
   }
 }
