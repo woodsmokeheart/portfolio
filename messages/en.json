@@ -48,5 +48,19 @@
       "field": "Attachments",
       "label": "Attachments"
     }
+  },
+  "content": {
+    "title": {
+      "name": "Denis Kukobin",
+      "headline": "QA Lead — turning release chaos into predictable quality.",
+      "metrics": {
+        "microservices": "microservices",
+        "years": "years in QA",
+        "teams": "teams led"
+      }
+    },
+    "description": {
+      "body": "I lead QA on a casino and sportsbook platform: 21 microservices, a Go backend, a Next.js frontend, events over Kafka, observability in Grafana, and a move to Kubernetes. I push shift-left, Playwright automation, and processes the team actually uses instead of filing away. I like breaking the system before production — so there's nothing left to break in production."
+    }
   }
 }
