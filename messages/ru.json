@@ -141,6 +141,43 @@
           "year": "2024"
         }
       ]
+    },
+    "environment": {
+      "groups": [
+        {
+          "title": "Тестирование",
+          "skills": [
+            { "label": "Тест-дизайн / стратегия", "level": 95 },
+            { "label": "Ручное QA", "level": 90 },
+            { "label": "Playwright / E2E автоматизация", "level": 85 },
+            { "label": "Тестирование API", "level": 88 },
+            { "label": "Триаж багов / RCA", "level": 90 }
+          ]
+        },
+        {
+          "title": "Платформа",
+          "skills": [
+            { "label": "Go (чтение / отладка)", "level": 70 },
+            { "label": "Next.js / QA фронтенда", "level": 75 },
+            { "label": "Kafka", "level": 70 },
+            { "label": "Grafana / наблюдаемость", "level": 80 },
+            { "label": "Kubernetes", "level": 60 }
+          ]
+        }
+      ],
+      "toolsHeading": "Инструменты",
+      "tools": [
+        "Jira",
+        "Playwright",
+        "Postman",
+        "Grafana",
+        "Kafka",
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "Confluence",
+        "Figma"
+      ]
     }
   }
 }

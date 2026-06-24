@@ -141,6 +141,43 @@
           "year": "2024"
         }
       ]
+    },
+    "environment": {
+      "groups": [
+        {
+          "title": "Testing",
+          "skills": [
+            { "label": "Test design / strategy", "level": 95 },
+            { "label": "Manual QA", "level": 90 },
+            { "label": "Playwright / E2E automation", "level": 85 },
+            { "label": "API testing", "level": 88 },
+            { "label": "Bug triage / RCA", "level": 90 }
+          ]
+        },
+        {
+          "title": "Platform",
+          "skills": [
+            { "label": "Go (reading / debugging)", "level": 70 },
+            { "label": "Next.js / frontend QA", "level": 75 },
+            { "label": "Kafka", "level": 70 },
+            { "label": "Grafana / observability", "level": 80 },
+            { "label": "Kubernetes", "level": 60 }
+          ]
+        }
+      ],
+      "toolsHeading": "Tools",
+      "tools": [
+        "Jira",
+        "Playwright",
+        "Postman",
+        "Grafana",
+        "Kafka",
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "Confluence",
+        "Figma"
+      ]
     }
   }
 }

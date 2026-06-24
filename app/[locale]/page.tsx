@@ -8,6 +8,7 @@ import { PreconditionsSection } from "@/components/sections/preconditions-sectio
 import { StepsSection } from "@/components/sections/steps-section";
 import { ExpectedSection } from "@/components/sections/expected-section";
 import { ActualSection } from "@/components/sections/actual-section";
+import { EnvironmentSection } from "@/components/sections/environment-section";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,6 +21,7 @@ const REAL_SECTIONS = new Set([
   "steps",
   "expected",
   "actual",
+  "environment",
 ]);
 
 export default function Home({ params }: Props) {
@@ -36,6 +38,7 @@ export default function Home({ params }: Props) {
       <StepsSection />
       <ExpectedSection />
       <ActualSection />
+      <EnvironmentSection />
 
       {SECTIONS.filter((section) => !REAL_SECTIONS.has(section.id)).map(
         (section) => (
