@@ -3,13 +3,17 @@
     "home": "Главная",
     "work": "Работы",
     "skills": "Навыки",
-    "about": "Обо мне"
+    "about": "Обо мне",
+    "jump": "Разделы"
   },
   "meta": {
     "status": "Статус",
     "available": "Открыт к предложениям",
     "priority": "Приоритет",
-    "priorityValue": "Highest"
+    "priorityValue": "Highest",
+    "assigneeName": "Denis Kukobin",
+    "assigneeRole": "QA Lead",
+    "jump": "Разделы"
   },
   "sections": {
     "title": {

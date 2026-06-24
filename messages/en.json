@@ -3,13 +3,17 @@
     "home": "Home",
     "work": "Work",
     "skills": "Skills",
-    "about": "About"
+    "about": "About",
+    "jump": "Sections"
   },
   "meta": {
     "status": "Status",
     "available": "Open to opportunities",
     "priority": "Priority",
-    "priorityValue": "Highest"
+    "priorityValue": "Highest",
+    "assigneeName": "Denis Kukobin",
+    "assigneeRole": "QA Lead",
+    "jump": "Sections"
   },
   "sections": {
     "title": {
