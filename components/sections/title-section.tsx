@@ -32,6 +32,27 @@ export function TitleSection() {
       </Tag>
 
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+        <Reveal className="lg:order-2 lg:shrink-0" delay={0.1}>
+          <figure className="w-full max-w-xs overflow-hidden rounded-md border border-stroke bg-bg lg:w-56">
+            <div className="flex items-center justify-between border-b border-stroke px-3 py-1.5">
+              <span className="font-mono text-xs text-text-secondary">
+                denis.jpg
+              </span>
+              <span className="font-mono text-xs text-text-quaternary">
+                600×600
+              </span>
+            </div>
+            <Image
+              src="/denis.jpg"
+              alt={t("name")}
+              width={600}
+              height={600}
+              priority
+              className="h-auto w-full"
+            />
+          </figure>
+        </Reveal>
+
         <div className="flex flex-col gap-5 lg:order-1">
           <Reveal>
             <h1 className="text-3xl font-semibold tracking-tight text-text-primary lg:text-5xl">
@@ -68,27 +89,6 @@ export function TitleSection() {
             </dl>
           </Reveal>
         </div>
-
-        <Reveal className="lg:order-2 lg:shrink-0" delay={0.1}>
-          <figure className="w-full max-w-xs overflow-hidden rounded-md border border-stroke bg-bg lg:w-56">
-            <div className="flex items-center justify-between border-b border-stroke px-3 py-1.5">
-              <span className="font-mono text-xs text-text-secondary">
-                denis.jpg
-              </span>
-              <span className="font-mono text-xs text-text-quaternary">
-                600×600
-              </span>
-            </div>
-            <Image
-              src="/denis.jpg"
-              alt={t("name")}
-              width={600}
-              height={600}
-              priority
-              className="h-auto w-full"
-            />
-          </figure>
-        </Reveal>
       </div>
     </section>
   );
