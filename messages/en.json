@@ -178,6 +178,31 @@
         "Confluence",
         "Figma"
       ]
+    },
+    "attachments": {
+      "intro": "Attaching what usually ships as files: recent QA writing and direct contacts.",
+      "articlesHeading": "Articles",
+      "allArticles": "All articles →",
+      "empty": "Articles are coming soon.",
+      "contactsHeading": "Contacts",
+      "contacts": {
+        "telegram": "Telegram",
+        "email": "Email",
+        "linkedin": "LinkedIn"
+      }
+    }
+  },
+  "articles": {
+    "indexTitle": "Articles",
+    "indexDescription": "Notes on QA, automation, and observability — no filler, no bureaucracy.",
+    "backHome": "← Back home",
+    "backToArticles": "← All articles",
+    "published": "Published",
+    "empty": "Articles are coming soon.",
+    "localeNotice": "This article is only available in {lang}.",
+    "langName": {
+      "ru": "Russian",
+      "en": "English"
     }
   }
 }

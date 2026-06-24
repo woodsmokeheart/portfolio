@@ -178,6 +178,31 @@
         "Confluence",
         "Figma"
       ]
+    },
+    "attachments": {
+      "intro": "Прикладываю к тикету то, что обычно идёт файлами: свежие заметки про QA и прямые контакты.",
+      "articlesHeading": "Статьи",
+      "allArticles": "Все статьи →",
+      "empty": "Статьи скоро появятся.",
+      "contactsHeading": "Контакты",
+      "contacts": {
+        "telegram": "Telegram",
+        "email": "Почта",
+        "linkedin": "LinkedIn"
+      }
+    }
+  },
+  "articles": {
+    "indexTitle": "Статьи",
+    "indexDescription": "Заметки про QA, автоматизацию и наблюдаемость — без воды и бюрократии.",
+    "backHome": "← На главную",
+    "backToArticles": "← Ко всем статьям",
+    "published": "Опубликовано",
+    "empty": "Статьи скоро появятся.",
+    "localeNotice": "Эта статья доступна только на {lang}.",
+    "langName": {
+      "ru": "русском",
+      "en": "английском"
     }
   }
 }
