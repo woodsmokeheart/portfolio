@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "skills": "Skills",
+    "about": "About"
+  },
+  "meta": {
+    "status": "Status",
+    "available": "Open to opportunities",
+    "priority": "Priority",
+    "priorityValue": "Highest"
+  },
+  "sections": {
+    "title": {
+      "field": "Title",
+      "label": "Title"
+    },
+    "description": {
+      "field": "Description",
+      "label": "Description"
+    },
+    "preconditions": {
+      "field": "Preconditions",
+      "label": "Preconditions"
+    },
+    "steps": {
+      "field": "Steps to Reproduce",
+      "label": "Steps to Reproduce"
+    },
+    "expected": {
+      "field": "Expected Result",
+      "label": "Expected Result"
+    },
+    "actual": {
+      "field": "Actual Result",
+      "label": "Actual Result"
+    },
+    "environment": {
+      "field": "Environment",
+      "label": "Environment"
+    },
+    "attachments": {
+      "field": "Attachments",
+      "label": "Attachments"
+    }
+  }
+}

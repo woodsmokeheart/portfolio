@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home": "Главная",
+    "work": "Работы",
+    "skills": "Навыки",
+    "about": "Обо мне"
+  },
+  "meta": {
+    "status": "Статус",
+    "available": "Открыт к предложениям",
+    "priority": "Приоритет",
+    "priorityValue": "Highest"
+  },
+  "sections": {
+    "title": {
+      "field": "Title",
+      "label": "Заголовок"
+    },
+    "description": {
+      "field": "Description",
+      "label": "Описание"
+    },
+    "preconditions": {
+      "field": "Preconditions",
+      "label": "Предусловия"
+    },
+    "steps": {
+      "field": "Steps to Reproduce",
+      "label": "Шаги воспроизведения"
+    },
+    "expected": {
+      "field": "Expected Result",
+      "label": "Ожидаемый результат"
+    },
+    "actual": {
+      "field": "Actual Result",
+      "label": "Фактический результат"
+    },
+    "environment": {
+      "field": "Environment",
+      "label": "Окружение"
+    },
+    "attachments": {
+      "field": "Attachments",
+      "label": "Вложения"
+    }
+  }
+}
