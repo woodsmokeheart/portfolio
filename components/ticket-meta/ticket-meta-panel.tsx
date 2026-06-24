@@ -9,7 +9,7 @@ import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import { StatusBadge } from "./status-badge";
 
 const TICKET_ID = "QA-001";
-const LABELS = ["qa-lead", "automation", "go", "kafka"] as const;
+const LABELS = ["qa-lead", "fullstack", "playwright", "grafana"] as const;
 
 function Avatar() {
   const [failed, setFailed] = useState(false);
