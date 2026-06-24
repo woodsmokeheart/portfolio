@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { LangSwitcher } from "@/components/lang-switcher";
 import { Tag } from "@/components/ui/tag";
 import { SECTIONS, sectionIds } from "@/lib/sections";
@@ -33,7 +34,12 @@ function Avatar() {
 
 export function TicketMetaPanel() {
   const t = useTranslations();
+  const locale = useLocale();
+  const pathname = usePathname();
   const activeId = useScrollSpy(sectionIds());
+
+  const isHome = pathname === `/${locale}` || pathname === "/";
+  const sectionHref = (id: string) => (isHome ? `#${id}` : `/${locale}#${id}`);
 
   return (
     <aside className="hidden lg:flex lg:flex-col lg:gap-6 lg:self-start lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto lg:pt-16 lg:pb-10 lg:pr-2">
@@ -73,11 +79,11 @@ export function TicketMetaPanel() {
 
       <nav aria-label={t("meta.jump")} className="flex flex-col gap-1 border-t border-stroke pt-5">
         {SECTIONS.map((section) => {
-          const active = section.id === activeId;
+          const active = isHome && section.id === activeId;
           return (
             <a
               key={section.id}
-              href={`#${section.id}`}
+              href={sectionHref(section.id)}
               aria-current={active ? "true" : undefined}
               className={[
                 "rounded px-2 py-1 font-mono text-xs transition-colors",
