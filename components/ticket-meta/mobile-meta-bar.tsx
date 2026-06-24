@@ -1,7 +1,8 @@
 "use client";
 
 import { useId, useState } from "react";
-import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { LangSwitcher } from "@/components/lang-switcher";
 import { SECTIONS } from "@/lib/sections";
 import { StatusBadge } from "./status-badge";
@@ -10,8 +11,14 @@ const TICKET_ID = "QA-001";
 
 export function MobileMetaBar() {
   const t = useTranslations();
+  const locale = useLocale();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const menuId = useId();
+
+  // On the home page anchors resolve locally; from other pages we need the full path.
+  const isHome = pathname === `/${locale}` || pathname === "/";
+  const sectionHref = (id: string) => (isHome ? `#${id}` : `/${locale}#${id}`);
 
   return (
     <div
@@ -52,7 +59,7 @@ export function MobileMetaBar() {
           {SECTIONS.map((section) => (
             <a
               key={section.id}
-              href={`#${section.id}`}
+              href={sectionHref(section.id)}
               onClick={() => setOpen(false)}
               className="rounded px-2 py-2 font-mono text-sm text-text-secondary transition-colors hover:bg-bg-elevated hover:text-text-primary"
             >
