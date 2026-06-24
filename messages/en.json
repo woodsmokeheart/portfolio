@@ -191,8 +191,8 @@
   "articles": {
     "indexTitle": "Articles",
     "indexDescription": "Notes on QA, automation, and observability — no filler, no bureaucracy.",
-    "backHome": "← Back home",
-    "backToArticles": "← All articles",
+    "backHome": "Back home",
+    "backToArticles": "All articles",
     "published": "Published",
     "empty": "Articles are coming soon.",
     "localeNotice": "This article is only available in {lang}.",

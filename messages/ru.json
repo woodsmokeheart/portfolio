@@ -191,8 +191,8 @@
   "articles": {
     "indexTitle": "Статьи",
     "indexDescription": "Заметки про QA, автоматизацию и наблюдаемость — без воды и без бюрократии.",
-    "backHome": "← На главную",
-    "backToArticles": "← Ко всем статьям",
+    "backHome": "На главную",
+    "backToArticles": "Ко всем статьям",
     "published": "Опубликовано",
     "empty": "Статьи скоро появятся.",
     "localeNotice": "Эта статья доступна только на {lang}.",
