@@ -14,7 +14,13 @@ export function MobileMetaBar() {
   const menuId = useId();
 
   return (
-    <div className="sticky top-0 z-20 border-b border-stroke bg-bg/80 backdrop-blur lg:hidden">
+    <div
+      className="sticky top-0 z-20 border-b border-stroke backdrop-blur lg:hidden"
+      style={{
+        backgroundColor: "rgba(10, 10, 11, 0.85)",
+        WebkitBackdropFilter: "blur(8px)",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-3xl items-center justify-between gap-3 px-6 py-3">
         <div className="flex items-center gap-2">
           <span className="font-mono text-sm font-semibold text-text-primary">
