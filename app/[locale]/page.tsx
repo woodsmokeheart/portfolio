@@ -4,12 +4,19 @@ import { setRequestLocale } from "next-intl/server";
 import { SECTIONS } from "@/lib/sections";
 import { TitleSection } from "@/components/sections/title-section";
 import { DescriptionSection } from "@/components/sections/description-section";
+import { PreconditionsSection } from "@/components/sections/preconditions-section";
+import { StepsSection } from "@/components/sections/steps-section";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const REAL_SECTIONS = new Set(["title", "description"]);
+const REAL_SECTIONS = new Set([
+  "title",
+  "description",
+  "preconditions",
+  "steps",
+]);
 
 export default function Home({ params }: Props) {
   const { locale } = use(params);
@@ -21,6 +28,8 @@ export default function Home({ params }: Props) {
     <main className="flex w-full flex-col gap-4 py-10 lg:py-16">
       <TitleSection />
       <DescriptionSection />
+      <PreconditionsSection />
+      <StepsSection />
 
       {SECTIONS.filter((section) => !REAL_SECTIONS.has(section.id)).map(
         (section) => (

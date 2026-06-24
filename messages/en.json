@@ -61,6 +61,49 @@
     },
     "description": {
       "body": "I lead QA on a casino and sportsbook platform: 21 microservices, a Go backend, a Next.js frontend, events over Kafka, observability in Grafana, and a move to Kubernetes. I push shift-left, Playwright automation, and processes the team actually uses instead of filing away. I like breaking the system before production — so there's nothing left to break in production."
+    },
+    "preconditions": {
+      "items": [
+        "Started in manual testing — learned to break a product before its users do.",
+        "Moved into automation: Playwright, API checks, and stable pipelines instead of manual grind.",
+        "Dove into a high-load casino and sportsbook platform — 21 microservices, Go, Kafka, Grafana.",
+        "Grew into process and people: building QA standards, leading teams, and driving shift-left.",
+        "Believe quality isn't a department at the end of the line, but a habit of the whole team."
+      ]
+    },
+    "steps": {
+      "items": [
+        {
+          "year": "2019",
+          "role": "Manual QA",
+          "org": "first projects",
+          "detail": "Manual testing, bug reports, checklists. Learned to think like a user and an attacker at once."
+        },
+        {
+          "year": "2021",
+          "role": "QA Engineer",
+          "org": "product team",
+          "detail": "Test design, regression, working from requirements. Started catching defects at acceptance, not in prod."
+        },
+        {
+          "year": "2022",
+          "role": "Automation / SDET",
+          "org": "web & API",
+          "detail": "Playwright automation, API checks, and CI integration. The grind moved into pipelines."
+        },
+        {
+          "year": "2024",
+          "role": "Senior QA",
+          "org": "casino & sportsbook platform",
+          "detail": "High-load product, microservices, Kafka, log analysis in Grafana. Tough incidents and investigations."
+        },
+        {
+          "year": "2026",
+          "role": "QA Lead",
+          "org": "SprutGaming",
+          "detail": "Leading teams, building QA processes and standards, driving shift-left and automation across the platform."
+        }
+      ]
     }
   }
 }
