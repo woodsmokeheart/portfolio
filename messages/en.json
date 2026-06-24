@@ -60,88 +60,88 @@
       "metrics": {
         "microservices": "microservices",
         "years": "years in QA",
-        "teams": "teams led"
+        "teams": "people in team"
       }
     },
     "description": {
-      "body": "I lead QA on a casino and sportsbook platform: 21 microservices, a Go backend, a Next.js frontend, events over Kafka, observability in Grafana, and a move to Kubernetes. I push shift-left, Playwright automation, and processes the team actually uses instead of filing away. I like breaking the system before production — so there's nothing left to break in production."
+      "body": "Senior QA Engineer with 6+ years in high-load products: iGaming, fintech, blockchain, LLM platforms. Frontend developer background (React, Next.js) — I understand architecture and testability from the inside. QA Lead at SprutGaming: 21 microservices, Go / Kafka / K8s. I introduced AI-assisted QA as a company standard and built the QA function from scratch with a team of 14."
     },
     "preconditions": {
       "items": [
-        "Started in manual testing — learned to break a product before its users do.",
-        "Moved into automation: Playwright, API checks, and stable pipelines instead of manual grind.",
-        "Dove into a high-load casino and sportsbook platform — 21 microservices, Go, Kafka, Grafana.",
-        "Grew into process and people: building QA standards, leading teams, and driving shift-left.",
-        "Believe quality isn't a department at the end of the line, but a habit of the whole team."
+        "Started as a frontend developer (React, Next.js) — I understand code from the inside and test with source access.",
+        "4 years at Aurora Infinity: blockchain DEX, crypto platforms, LLM chat — testing products more complex than average.",
+        "Moved to iGaming: 21 microservices, Go / Kafka / Kubernetes — high-load B2B platform.",
+        "Introduced AI-assisted QA as a company standard: LLM-based DB-migration verification, pixel-perfect, Cursor IDE + Figma MCP.",
+        "QA Lead with a 14-person team: processes from scratch, shift-left, DoD, C-level reporting."
       ]
     },
     "steps": {
       "items": [
         {
-          "year": "2019",
-          "role": "Manual QA",
-          "org": "first projects",
-          "detail": "Manual testing, bug reports, checklists. Learned to think like a user and an attacker at once."
+          "year": "2020",
+          "role": "QA Engineer / Frontend Dev",
+          "org": "VegaAvangard",
+          "detail": "First QA role: white-box testing of a custom CRM, manual and integration testing, frontend in React in parallel. Became the sole QA by the end."
         },
         {
           "year": "2021",
-          "role": "QA Engineer",
-          "org": "product team",
-          "detail": "Test design, regression, working from requirements. Started catching defects at acceptance, not in prod."
+          "role": "QA Engineer / Frontend Dev",
+          "org": "Aurora Infinity",
+          "detail": "4 years across multiple products: author social network, L2 ETH DEX, crypto platform. TypeScript, React, Playwright, Jest (~70% coverage), mobile testing via TestFlight."
         },
         {
-          "year": "2022",
-          "role": "Automation / SDET",
-          "org": "web & API",
-          "detail": "Playwright automation, API checks, and CI integration. The grind moved into pipelines."
+          "year": "2023",
+          "role": "QA Engineer (LLM & Crypto)",
+          "org": "Aurora Infinity",
+          "detail": "Most complex product — LLM chat: streaming AI responses, MCP servers, agent tool calls, crypto subscriptions. Testing what isn't in any textbook yet."
         },
         {
-          "year": "2024",
-          "role": "Senior QA",
-          "org": "casino & sportsbook platform",
-          "detail": "High-load product, microservices, Kafka, log analysis in Grafana. Tough incidents and investigations."
+          "year": "2025",
+          "role": "Senior QA Engineer",
+          "org": "SprutGaming",
+          "detail": "iGaming B2B platform: white-label sites, admin panel, payment flows (crypto invoice, H2H, fiat), PHP→Go migrations. Introduced AI-assisted QA as a team workflow."
         },
         {
           "year": "2026",
           "role": "QA Lead",
           "org": "SprutGaming",
-          "detail": "Leading teams, building QA processes and standards, driving shift-left and automation across the platform."
+          "detail": "Team of 14 (9 core + 5 contractors). Built QA from zero, shift-left, two-cycle testing, onboarded 6 engineers, syncs with CTO 3× per week."
         }
       ]
     },
     "expected": {
       "items": [
-        "Build a mature shift-left culture where quality is designed in at the requirements stage, not caught in production.",
-        "Scale automation so platform-wide regression runs itself, freeing hands for exploratory testing.",
-        "Grow a strong QA team — people who reason in risks, not just test cases.",
-        "Reduce defects that escape to production and cut incident response time (MTTR).",
-        "Give back: standards, articles, and talks that move the QA community forward."
+        "Scale AI-assisted QA: from point tools to a systemic team-wide approach.",
+        "Build a mature shift-left culture — quality designed in at the requirements stage, not caught in production.",
+        "Grow a team of people who reason in risks and architecture, not just test cases.",
+        "Reduce escaped defects and MTTR through automation and observability.",
+        "Give back: standards, articles, talks — move the QA community forward."
       ]
     },
     "actual": {
       "items": [
         {
-          "title": "QA process overhaul: two-cycle testing",
-          "sub": "Introduced smoke + e2e cycles and acceptance-criteria sign-off — defects surface earlier and releases got predictable.",
-          "tags": ["Process", "Shift-left", "Acceptance"],
+          "title": "AI-assisted QA as a company standard",
+          "sub": "LLM-based DB migration verification, pixel-perfect via AI, e2e with Cursor IDE + Figma MCP. Formalized in the internal QA regulation.",
+          "tags": ["AI", "Cursor", "Figma MCP", "Automation"],
           "year": "2026"
         },
         {
-          "title": "Playwright automation framework",
-          "sub": "Stable UI and API suites in CI: regression moved into pipelines and manual grind dropped sharply.",
-          "tags": ["Playwright", "CI", "API"],
-          "year": "2025"
+          "title": "QA from zero: shift-left + two-cycle testing",
+          "sub": "No docs, no test cases on day one. Built checklists → test cases → AC review → smoke + e2e + DoD. Adopted as a company-wide process standard.",
+          "tags": ["Process", "Shift-left", "DoD"],
+          "year": "2026"
         },
         {
-          "title": "Release stabilization across 21 microservices",
-          "sub": "Coordinated testing of a distributed Go/Next.js/Kafka platform mid-migration to Kubernetes.",
-          "tags": ["Go", "Kafka", "Kubernetes"],
-          "year": "2025"
+          "title": "Team of 14 from scratch",
+          "sub": "Onboarded 6 engineers (all still with the company), led 9 core QA + 5 contractors, daily prioritization and C-level reporting.",
+          "tags": ["Leadership", "Onboarding", "Reporting"],
+          "year": "2026"
         },
         {
-          "title": "Observability-driven incident triage",
-          "sub": "Reproduced and localized defects from Grafana logs and Kafka events — from symptom to root cause.",
-          "tags": ["Grafana", "Observability", "Incident"],
+          "title": "LLM chat: testing AI agents",
+          "sub": "Streaming responses, MCP servers, agent tool calls, chat async behavior, crypto subscriptions — full QA cycle on a non-standard product.",
+          "tags": ["LLM", "MCP", "Crypto", "Streaming"],
           "year": "2024"
         }
       ]
@@ -152,35 +152,28 @@
           "title": "Testing",
           "skills": [
             { "label": "Test design / strategy", "level": 95 },
-            { "label": "Manual QA", "level": 90 },
-            { "label": "Playwright / E2E automation", "level": 85 },
-            { "label": "API testing", "level": 88 },
-            { "label": "Bug triage / RCA", "level": 90 }
+            { "label": "Manual UI / API / E2E", "level": 92 },
+            { "label": "Playwright / automation", "level": 85 },
+            { "label": "White-box / code reading", "level": 80 },
+            { "label": "Root Cause Analysis", "level": 90 }
           ]
         },
         {
           "title": "Platform",
           "skills": [
+            { "label": "React / Next.js", "level": 82 },
             { "label": "Go (reading / debugging)", "level": 70 },
-            { "label": "Next.js / frontend QA", "level": 75 },
-            { "label": "Kafka", "level": 70 },
+            { "label": "Kafka / event-driven", "level": 72 },
             { "label": "Grafana / observability", "level": 80 },
-            { "label": "Kubernetes", "level": 60 }
+            { "label": "Kubernetes / Docker", "level": 65 }
           ]
         }
       ],
       "toolsHeading": "Tools",
       "tools": [
-        "Jira",
-        "Playwright",
-        "Postman",
-        "Grafana",
-        "Kafka",
-        "Git",
-        "Docker",
-        "Kubernetes",
-        "Confluence",
-        "Figma"
+        "Jira", "Playwright", "Postman", "Swagger", "Charles Proxy",
+        "PostgreSQL", "Jest", "Grafana", "Kafka", "Git",
+        "Docker", "Kubernetes", "Confluence", "Figma", "Storybook"
       ]
     },
     "attachments": {

@@ -16,8 +16,8 @@ export type Contact = {
 };
 
 export const CONTACTS: Contact[] = [
-  { key: "telegram", href: "https://t.me/your_handle", handle: "@your_handle" },
-  { key: "email", href: "mailto:you@example.com", handle: "you@example.com" },
+  { key: "telegram", href: "https://t.me/url64", handle: "@url64" },
+  { key: "email", href: "mailto:blckwdmayday@gmail.com", handle: "blckwdmayday@gmail.com" },
   {
     key: "linkedin",
     href: "https://linkedin.com/in/your-handle",

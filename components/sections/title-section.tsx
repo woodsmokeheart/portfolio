@@ -8,8 +8,8 @@ const LABELS = ["qa-lead", "automation", "go", "kafka"];
 
 const METRICS = [
   { key: "microservices", value: 21, suffix: "" },
-  { key: "years", value: 5, suffix: "+" },
-  { key: "teams", value: 3, suffix: "" },
+  { key: "years", value: 6, suffix: "+" },
+  { key: "teams", value: 14, suffix: "" },
 ] as const;
 
 /**
