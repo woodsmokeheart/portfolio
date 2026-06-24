@@ -153,19 +153,19 @@
           "skills": [
             { "label": "Test design & strategy", "level": 95 },
             { "label": "Manual UI / API / E2E", "level": 92 },
-            { "label": "Root Cause Analysis", "level": 90 },
+            { "label": "Root Cause Analysis", "level": 100 },
             { "label": "Playwright / automation", "level": 85 },
-            { "label": "White-box / code reading", "level": 80 }
+            { "label": "White-box / code reading", "level": 97 }
           ]
         },
         {
           "title": "Platform",
           "skills": [
-            { "label": "React / Next.js", "level": 82 },
+            { "label": "React / Next.js", "level": 100 },
             { "label": "Grafana / observability", "level": 80 },
             { "label": "Kafka / event-driven", "level": 72 },
-            { "label": "Go (reading & debugging)", "level": 70 },
-            { "label": "Kubernetes / Docker", "level": 65 }
+            { "label": "TypeScript / JavaScript", "level": 88 },
+            { "label": "Kubernetes / Docker", "level": 78 }
           ]
         }
       ],
