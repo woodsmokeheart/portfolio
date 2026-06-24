@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Denis Kukobin — QA Lead",
-    "description": "QA Lead portfolio rendered as a bug ticket: process, Playwright automation, observability, and testing high-load microservices."
+    "title": "Denis Kukobin — QA Lead | Senior QA Engineer",
+    "description": "Denis Kukobin — QA Lead with 6+ years of experience. iGaming platform testing, Playwright automation, microservices Go/Kafka/K8s. Senior QA engineer portfolio."
   },
   "nav": {
     "home": "Home",
@@ -38,15 +38,15 @@
     },
     "expected": {
       "field": "Expected Result",
-      "label": "Goals"
+      "label": "Where I'm headed"
     },
     "actual": {
       "field": "Actual Result",
-      "label": "What I've done"
+      "label": "What I've shipped"
     },
     "environment": {
       "field": "Environment",
-      "label": "Skills & stack"
+      "label": "Stack & tools"
     },
     "attachments": {
       "field": "Attachments",
@@ -56,7 +56,7 @@
   "content": {
     "title": {
       "name": "Denis Kukobin",
-      "headline": "QA Lead — turning release chaos into predictable quality.",
+      "headline": "QA Lead — I find what breaks the system before the users do.",
       "metrics": {
         "microservices": "microservices",
         "years": "years in QA",
@@ -64,15 +64,15 @@
       }
     },
     "description": {
-      "body": "Senior QA Engineer with 6+ years in high-load products: iGaming, fintech, blockchain, LLM platforms. Frontend developer background (React, Next.js) — I understand architecture and testability from the inside. QA Lead at SprutGaming: 21 microservices, Go / Kafka / K8s. I introduced AI-assisted QA as a company standard and built the QA function from scratch with a team of 14."
+      "body": "Six years in QA — still genuinely curious. Started as a React developer, so code doesn't scare me: I read pull requests and catch bugs at the requirements stage. Right now I lead QA at SprutGaming — an iGaming B2B platform: 21 microservices, Go, Kafka, Kubernetes. Team of 14. I introduced AI-assisted testing as a company standard — not as a buzzword, but because it actually works."
     },
     "preconditions": {
       "items": [
-        "Started as a frontend developer (React, Next.js) — I understand code from the inside and test with source access.",
-        "4 years at Aurora Infinity: blockchain DEX, crypto platforms, LLM chat — testing products more complex than average.",
-        "Moved to iGaming: 21 microservices, Go / Kafka / Kubernetes — high-load B2B platform.",
-        "Introduced AI-assisted QA as a company standard: LLM-based DB-migration verification, pixel-perfect, Cursor IDE + Figma MCP.",
-        "QA Lead with a 14-person team: processes from scratch, shift-left, DoD, C-level reporting."
+        "Came to QA from frontend (React, Next.js) — I understand how a product is built, not just how it looks from the outside.",
+        "Four years at Aurora Infinity: blockchain DEX, crypto exchanges, LLM chat — you learn to test things no textbook covers.",
+        "Then iGaming: 21 microservices, payment integrations, Go services, Kafka, K8s. Different scale, same mindset.",
+        "Introduced AI-assisted QA as a real team workflow: LLM migration verification, Cursor IDE + Figma MCP — not a pilot, now a standard.",
+        "Built QA from scratch: from no documentation to full coverage, DoD, and shift-left processes embedded in the company."
       ]
     },
     "steps": {
@@ -81,66 +81,66 @@
           "year": "2020",
           "role": "QA Engineer / Frontend Dev",
           "org": "VegaAvangard",
-          "detail": "First QA role: white-box testing of a custom CRM, manual and integration testing, frontend in React in parallel. Became the sole QA by the end."
+          "detail": "First QA role in a company that had none before. White-box testing of a CRM, frontend in React alongside. Ended up as the sole QA on the project."
         },
         {
           "year": "2021",
           "role": "QA Engineer / Frontend Dev",
           "org": "Aurora Infinity",
-          "detail": "4 years across multiple products: author social network, L2 ETH DEX, crypto platform. TypeScript, React, Playwright, Jest (~70% coverage), mobile testing via TestFlight."
+          "detail": "Several non-standard products back to back: an author social network, an L2 ETH DEX, a crypto platform. Playwright, Jest, ~70% coverage, mobile testing via TestFlight."
         },
         {
           "year": "2023",
-          "role": "QA Engineer (LLM & Crypto)",
+          "role": "QA Engineer — LLM & Crypto",
           "org": "Aurora Infinity",
-          "detail": "Most complex product — LLM chat: streaming AI responses, MCP servers, agent tool calls, crypto subscriptions. Testing what isn't in any textbook yet."
+          "detail": "LLM chat with MCP servers and agent tool calls — a product with no existing testing playbooks. Wrote the approaches from scratch."
         },
         {
           "year": "2025",
           "role": "Senior QA Engineer",
           "org": "SprutGaming",
-          "detail": "iGaming B2B platform: white-label sites, admin panel, payment flows (crypto invoice, H2H, fiat), PHP→Go migrations. Introduced AI-assisted QA as a team workflow."
+          "detail": "iGaming B2B platform: white-label casinos, payment flows (crypto invoice, H2H, fiat), 21 microservices. Introduced AI-assisted QA as a team workflow."
         },
         {
           "year": "2026",
           "role": "QA Lead",
           "org": "SprutGaming",
-          "detail": "Team of 14 (9 core + 5 contractors). Built QA from zero, shift-left, two-cycle testing, onboarded 6 engineers, syncs with CTO 3× per week."
+          "detail": "Team of 14 (9 core + 5 contractors). Built processes from zero, onboarded 6 engineers, syncs with CTO 3× a week."
         }
       ]
     },
     "expected": {
       "items": [
-        "Scale AI-assisted QA: from point tools to a systemic team-wide approach.",
-        "Build a mature shift-left culture — quality designed in at the requirements stage, not caught in production.",
-        "Grow a team of people who reason in risks and architecture, not just test cases.",
-        "Reduce escaped defects and MTTR through automation and observability.",
-        "Give back: standards, articles, talks — move the QA community forward."
+        "Make AI-assisted QA the default — not an exotic experiment for a few teams, but a baseline.",
+        "Shift-left into culture: quality built in at the requirements stage, not fixed with patches.",
+        "Grow people who think in risks, not just metrics.",
+        "Cut escaped defects and MTTR through observability and automation.",
+        "Give back: articles, standards, talks — because the QA community deserves to grow."
       ]
     },
     "actual": {
       "items": [
         {
-          "title": "AI-assisted QA as a company standard",
-          "sub": "LLM-based DB migration verification, pixel-perfect via AI, e2e with Cursor IDE + Figma MCP. Formalized in the internal QA regulation.",
+          "title": "AI-assisted QA — now a company regulation",
+          "sub": "LLM-based DB migration verification, pixel-perfect via AI, e2e with Cursor IDE and Figma MCP. Not a pilot — the team's actual workflow.",
           "tags": ["AI", "Cursor", "Figma MCP", "Automation"],
           "year": "2026"
         },
         {
-          "title": "QA from zero: shift-left + two-cycle testing",
-          "sub": "No docs, no test cases on day one. Built checklists → test cases → AC review → smoke + e2e + DoD. Adopted as a company-wide process standard.",
+          "title": "QA from scratch: chaos → company standard",
+          "sub": "Day one: no test cases, no docs. Built checklists → test cases → AC review → smoke + e2e + DoD. Adopted across the whole company.",
           "tags": ["Process", "Shift-left", "DoD"],
           "year": "2026"
         },
         {
-          "title": "Team of 14 from scratch",
-          "sub": "Onboarded 6 engineers (all still with the company), led 9 core QA + 5 contractors, daily prioritization and C-level reporting.",
+          "title": "Team of 14 from zero — and everyone stayed",
+          "sub": "Onboarded 6 engineers (all still with the company). Led 9 core QA + 5 contractors, daily prioritization, C-level reporting.",
           "tags": ["Leadership", "Onboarding", "Reporting"],
           "year": "2026"
         },
         {
-          "title": "LLM chat: testing AI agents",
-          "sub": "Streaming responses, MCP servers, agent tool calls, chat async behavior, crypto subscriptions — full QA cycle on a non-standard product.",
+          "title": "LLM chat: testing where no playbook exists",
+          "sub": "Streaming AI responses, MCP servers, agent tool calls, crypto subscriptions. Wrote the testing approaches for this product class from scratch.",
           "tags": ["LLM", "MCP", "Crypto", "Streaming"],
           "year": "2024"
         }
@@ -151,20 +151,20 @@
         {
           "title": "Testing",
           "skills": [
-            { "label": "Test design / strategy", "level": 95 },
+            { "label": "Test design & strategy", "level": 95 },
             { "label": "Manual UI / API / E2E", "level": 92 },
+            { "label": "Root Cause Analysis", "level": 90 },
             { "label": "Playwright / automation", "level": 85 },
-            { "label": "White-box / code reading", "level": 80 },
-            { "label": "Root Cause Analysis", "level": 90 }
+            { "label": "White-box / code reading", "level": 80 }
           ]
         },
         {
           "title": "Platform",
           "skills": [
             { "label": "React / Next.js", "level": 82 },
-            { "label": "Go (reading / debugging)", "level": 70 },
-            { "label": "Kafka / event-driven", "level": 72 },
             { "label": "Grafana / observability", "level": 80 },
+            { "label": "Kafka / event-driven", "level": 72 },
+            { "label": "Go (reading & debugging)", "level": 70 },
             { "label": "Kubernetes / Docker", "level": 65 }
           ]
         }
@@ -177,15 +177,14 @@
       ]
     },
     "attachments": {
-      "intro": "Attaching what usually ships as files: recent QA writing and direct contacts.",
+      "intro": "What usually ships as files: recent QA writing and direct contacts.",
       "articlesHeading": "Articles",
       "allArticles": "All articles →",
       "empty": "Articles are coming soon.",
       "contactsHeading": "Contacts",
       "contacts": {
         "telegram": "Telegram",
-        "email": "Email",
-        "linkedin": "LinkedIn"
+        "email": "Email"
       }
     }
   },

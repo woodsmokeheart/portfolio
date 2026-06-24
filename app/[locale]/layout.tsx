@@ -41,6 +41,17 @@ export async function generateMetadata({
       template: "%s — Denis Kukobin",
     },
     description,
+    keywords: [
+      "Denis Kukobin",
+      "QA Lead",
+      "Senior QA Engineer",
+      "Playwright",
+      "iGaming QA",
+      "test automation",
+      "микросервисы тестирование",
+      "Go Kafka Kubernetes QA",
+    ],
+    authors: [{ name: "Denis Kukobin", url: siteUrl }],
     alternates: {
       canonical: path,
       languages: {
@@ -51,7 +62,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      type: "website",
+      type: "profile",
       url: path,
       siteName: "Denis Kukobin",
       locale: ogLocale,
@@ -66,6 +77,40 @@ export async function generateMetadata({
   };
 }
 
+/** JSON-LD Person schema — helps Google/Yandex identify this as a personal portfolio page. */
+function PersonSchema({ locale }: { locale: string }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Denis Kukobin",
+    url: siteUrl,
+    jobTitle: "QA Lead",
+    description:
+      locale === "ru"
+        ? "Senior QA Engineer и QA Lead с 6+ годами опыта. Тестирование iGaming-платформ, автоматизация на Playwright, микросервисы Go/Kafka/K8s."
+        : "Senior QA Engineer and QA Lead with 6+ years of experience. iGaming platform testing, Playwright automation, microservices Go/Kafka/K8s.",
+    email: "blckwdmayday@gmail.com",
+    sameAs: ["https://t.me/url64"],
+    knowsAbout: [
+      "QA Engineering",
+      "Test Automation",
+      "Playwright",
+      "iGaming",
+      "Microservices",
+      "Go",
+      "Kafka",
+      "Kubernetes",
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
@@ -76,6 +121,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="h-full antialiased">
+      <head>
+        <PersonSchema locale={locale} />
+      </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
           <CursorGlow />

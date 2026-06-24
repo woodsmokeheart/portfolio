@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { Send, Mail, Briefcase } from "lucide-react";
+import { Send, Mail } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/ui/reveal";
@@ -11,7 +11,6 @@ import { CONTACTS, type ContactKey } from "@/lib/contacts";
 const CONTACT_ICONS: Record<ContactKey, LucideIcon> = {
   telegram: Send,
   email: Mail,
-  linkedin: Briefcase,
 };
 
 const LATEST_COUNT = 3;
