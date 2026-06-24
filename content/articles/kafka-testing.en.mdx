@@ -1,0 +1,34 @@
+---
+title_en: "Testing Kafka without pain"
+title_ru: "Тестирование Kafka без боли"
+date: "2026-06-20"
+tags: ["kafka", "qa", "backend"]
+cover: "/articles/kafka-testing.jpg"
+excerpt_en: "A pragmatic approach to testing event-driven systems built on Kafka."
+excerpt_ru: "Прагматичный подход к тестированию событийных систем на Kafka."
+---
+
+Testing Kafka-based systems feels intimidating until you split the problem into
+small, observable pieces. The broker itself is rarely the thing you need to
+verify — what you actually care about is whether your producers emit the right
+events and your consumers react to them correctly.
+
+## Start from the contract
+
+Treat every topic as a contract. Pin down the message schema, the partition key,
+and the ordering guarantees you depend on. Once those are explicit, most "flaky
+Kafka tests" turn out to be ordering or idempotency assumptions that were never
+written down.
+
+## Make consumers observable
+
+The fastest feedback loop is a test consumer that asserts on the events your
+service produces. Spin up an ephemeral topic, push a known payload through the
+producer, and assert on what lands on the other side. No mocking the broker, no
+guessing.
+
+## Keep it boring
+
+Boring tests survive refactors. Prefer real (or test-container) brokers for
+integration coverage and reserve mocks for the thin edges where speed matters
+more than fidelity.
