@@ -4,7 +4,7 @@ import { Counter } from "@/components/ui/counter";
 import { Reveal } from "@/components/ui/reveal";
 import { Tag } from "@/components/ui/tag";
 
-const LABELS = ["qa-lead", "automation", "go", "kafka"];
+const LABELS = ["qa-lead", "fullstack", "react", "kafka"];
 
 const METRICS = [
   { key: "microservices", value: 21, suffix: "" },
