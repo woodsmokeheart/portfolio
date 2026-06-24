@@ -36,7 +36,7 @@ export function TicketMetaPanel() {
   const activeId = useScrollSpy(sectionIds());
 
   return (
-    <aside className="hidden lg:flex lg:flex-col lg:gap-6 lg:self-start lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto lg:py-10 lg:pr-2">
+    <aside className="hidden lg:flex lg:flex-col lg:gap-6 lg:self-start lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto lg:pt-16 lg:pb-10 lg:pr-2">
       <div className="flex flex-col gap-2">
         <span className="font-mono text-lg font-semibold tracking-tight text-text-primary">
           {TICKET_ID}
