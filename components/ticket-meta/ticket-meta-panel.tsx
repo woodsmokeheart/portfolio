@@ -20,7 +20,7 @@ function Avatar() {
       {!failed && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/denis.jpg"
+          src="/denis-photo.jpg"
           alt=""
           aria-hidden
           onError={() => setFailed(true)}

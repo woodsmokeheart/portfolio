@@ -43,7 +43,7 @@ export function TitleSection() {
               </span>
             </div>
             <Image
-              src="/denis.jpg"
+              src="/denis-photo.jpg"
               alt={t("name")}
               width={1024}
               height={1365}
