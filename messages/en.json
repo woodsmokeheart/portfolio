@@ -122,8 +122,8 @@
       "items": [
         {
           "title": "AI-assisted QA — now a company regulation",
-          "sub": "LLM-based DB migration verification, pixel-perfect via AI, e2e with Cursor IDE and Figma MCP. Not a pilot — the team's actual workflow.",
-          "tags": ["AI", "Cursor", "Figma MCP", "Automation"],
+          "sub": "LLM-based DB migration verification, pixel-perfect via AI, e2e with Cursor IDE + Claude and Figma MCP. Not a pilot — the team's actual workflow.",
+          "tags": ["AI", "Claude", "Cursor", "Figma MCP"],
           "year": "2026"
         },
         {

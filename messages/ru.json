@@ -122,8 +122,8 @@
       "items": [
         {
           "title": "AI-assisted QA — закреплён как регламент компании",
-          "sub": "LLM-верификация DB-миграций, pixel-perfect через нейросеть, e2e с Cursor IDE и Figma MCP. Не пилот — уже стандарт работы команды.",
-          "tags": ["AI", "Cursor", "Figma MCP", "Automation"],
+          "sub": "LLM-верификация DB-миграций, pixel-perfect через нейросеть, e2e с Cursor IDE + Claude и Figma MCP. Не пилот — уже стандарт работы команды.",
+          "tags": ["AI", "Claude", "Cursor", "Figma MCP"],
           "year": "2026"
         },
         {
