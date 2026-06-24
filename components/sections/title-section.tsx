@@ -39,14 +39,14 @@ export function TitleSection() {
                 denis.jpg
               </span>
               <span className="font-mono text-xs text-text-quaternary">
-                600×600
+                1024×1365
               </span>
             </div>
             <Image
               src="/denis.jpg"
               alt={t("name")}
-              width={600}
-              height={600}
+              width={1024}
+              height={1365}
               priority
               sizes="(min-width: 1024px) 224px, (min-width: 640px) 320px, 100vw"
               className="h-auto w-full"
