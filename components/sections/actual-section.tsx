@@ -34,21 +34,13 @@ export function ActualSection() {
             as="li"
             key={item.title}
             delay={i * 0.08}
-            className="group border-t border-stroke first:border-t-0"
+            className="border-t border-stroke first:border-t-0"
           >
-            <div className="-mx-2 flex min-h-[44px] flex-col gap-2 rounded-md px-2 py-4 transition-colors lg:group-hover:bg-bg">
+          <div className="-mx-2 flex min-h-[44px] flex-col gap-2 rounded-md px-2 py-4">
               <div className="flex items-baseline justify-between gap-3">
-                <div className="flex items-baseline gap-2">
-                  <span
-                    aria-hidden
-                    className="select-none font-mono text-accent transition-all duration-200 lg:-translate-x-1 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100"
-                  >
-                    →
-                  </span>
-                  <h3 className="origin-left text-base font-semibold text-text-primary transition-transform duration-200 lg:text-lg lg:group-hover:translate-x-0.5">
-                    {item.title}
-                  </h3>
-                </div>
+                <h3 className="origin-left text-base font-semibold text-text-primary lg:text-lg">
+                  {item.title}
+                </h3>
                 <span className="shrink-0 font-mono text-sm font-medium text-accent">
                   {item.year}
                 </span>
