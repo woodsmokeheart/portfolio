@@ -48,6 +48,7 @@ export function TitleSection() {
               width={600}
               height={600}
               priority
+              sizes="(min-width: 1024px) 224px, (min-width: 640px) 320px, 100vw"
               className="h-auto w-full"
             />
           </figure>

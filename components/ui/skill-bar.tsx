@@ -20,7 +20,7 @@ export function SkillBar({ label, level, className }: SkillBarProps) {
           {clamped}%
         </span>
       </div>
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-bg-elevated">
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-stroke">
         <motion.div
           className="h-full rounded-full bg-accent"
           initial={reduce ? false : { width: 0 }}
