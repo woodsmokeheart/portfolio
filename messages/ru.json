@@ -22,35 +22,35 @@
   "sections": {
     "title": {
       "field": "Title",
-      "label": "Заголовок"
+      "label": "Профиль"
     },
     "description": {
       "field": "Description",
-      "label": "Описание"
+      "label": "Кто я"
     },
     "preconditions": {
       "field": "Preconditions",
-      "label": "Предусловия"
+      "label": "Как я пришёл в QA"
     },
     "steps": {
       "field": "Steps to Reproduce",
-      "label": "Шаги воспроизведения"
+      "label": "Карьерный путь"
     },
     "expected": {
       "field": "Expected Result",
-      "label": "Ожидаемый результат"
+      "label": "Цели"
     },
     "actual": {
       "field": "Actual Result",
-      "label": "Фактический результат"
+      "label": "Что я сделал"
     },
     "environment": {
       "field": "Environment",
-      "label": "Окружение"
+      "label": "Навыки и стек"
     },
     "attachments": {
       "field": "Attachments",
-      "label": "Вложения"
+      "label": "Статьи и контакты"
     }
   },
   "content": {

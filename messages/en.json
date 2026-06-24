@@ -22,35 +22,35 @@
   "sections": {
     "title": {
       "field": "Title",
-      "label": "Title"
+      "label": "Profile"
     },
     "description": {
       "field": "Description",
-      "label": "Description"
+      "label": "Who I am"
     },
     "preconditions": {
       "field": "Preconditions",
-      "label": "Preconditions"
+      "label": "How I got into QA"
     },
     "steps": {
       "field": "Steps to Reproduce",
-      "label": "Steps to Reproduce"
+      "label": "Career path"
     },
     "expected": {
       "field": "Expected Result",
-      "label": "Expected Result"
+      "label": "Goals"
     },
     "actual": {
       "field": "Actual Result",
-      "label": "Actual Result"
+      "label": "What I've done"
     },
     "environment": {
       "field": "Environment",
-      "label": "Environment"
+      "label": "Skills & stack"
     },
     "attachments": {
       "field": "Attachments",
-      "label": "Attachments"
+      "label": "Articles & contacts"
     }
   },
   "content": {
