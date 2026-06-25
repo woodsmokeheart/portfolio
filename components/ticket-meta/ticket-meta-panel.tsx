@@ -38,11 +38,11 @@ export function TicketMetaPanel() {
   const pathname = usePathname();
   const activeId = useScrollSpy(sectionIds());
 
-  const isHome = pathname === `/${locale}` || pathname === "/";
-  const sectionHref = (id: string) => (isHome ? `#${id}` : `/${locale}#${id}`);
+  const isQaPage = pathname === `/${locale}/qa`;
+  const sectionHref = (id: string) => (isQaPage ? `#${id}` : `/${locale}/qa#${id}`);
 
   return (
-    <aside className="hidden lg:flex lg:flex-col lg:gap-6 lg:self-start lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto lg:pt-16 lg:pb-10 lg:pr-2">
+    <aside className="hidden lg:flex lg:flex-col lg:gap-6 lg:self-start lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto lg:pt-8 lg:pb-24 lg:pr-2">
       <div className="flex flex-col gap-2">
         <span className="font-mono text-lg font-semibold tracking-tight text-text-primary">
           {TICKET_ID}
@@ -79,7 +79,7 @@ export function TicketMetaPanel() {
 
       <nav aria-label={t("meta.jump")} className="flex flex-col gap-1 border-t border-stroke pt-5">
         {SECTIONS.map((section) => {
-          const active = isHome && section.id === activeId;
+          const active = isQaPage && section.id === activeId;
           return (
             <a
               key={section.id}
@@ -97,6 +97,7 @@ export function TicketMetaPanel() {
           );
         })}
       </nav>
+
     </aside>
   );
 }

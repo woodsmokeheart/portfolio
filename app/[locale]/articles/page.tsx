@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft } from "lucide-react";
 import { routing } from "@/i18n/routing";
-import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/ui/reveal";
 import { ArticleCard } from "@/components/articles/article-card";
 import { getAllArticlesMeta, type Locale } from "@/lib/articles";
@@ -37,18 +35,10 @@ export default async function ArticlesPage({ params }: Props) {
   const articles = getAllArticlesMeta(locale as Locale);
 
   return (
-    <main className="flex w-full flex-col gap-6 py-10 lg:py-16">
-      <Link
-        href="/"
-        className="inline-flex w-fit items-center gap-2 font-mono text-xs text-text-tertiary transition-colors hover:text-accent"
-      >
-        <ArrowLeft className="size-4" aria-hidden />
-        {t("backHome")}
-      </Link>
-
+    <main className="flex w-full flex-col gap-6">
       <header className="flex flex-col gap-2">
         <span className="font-mono text-xs uppercase tracking-wider text-text-quaternary">
-          Attachments
+          ART-001
         </span>
         <h1 className="text-2xl font-semibold tracking-tight text-text-primary lg:text-3xl">
           {t("indexTitle")}

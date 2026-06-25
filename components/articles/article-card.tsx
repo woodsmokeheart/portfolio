@@ -17,7 +17,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group flex flex-col gap-3 rounded-md border border-stroke bg-bg p-4 transition-colors hover:border-accent focus-visible:border-accent focus-visible:outline-none"
+      className="group flex flex-col gap-3 rounded-md border border-stroke bg-bg p-4 transition-all duration-300 hover:border-accent hover:shadow-[0_0_24px_rgba(74,222,128,0.18)] focus-visible:border-accent focus-visible:outline-none focus-visible:shadow-[0_0_24px_rgba(74,222,128,0.18)]"
     >
       <div className="flex flex-col gap-1">
         <h3 className="text-base font-semibold tracking-tight text-text-primary transition-colors group-hover:text-accent">

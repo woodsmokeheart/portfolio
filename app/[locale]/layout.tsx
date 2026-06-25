@@ -5,8 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { ogImage, siteUrl } from "@/lib/site";
 import { CursorGlow } from "@/components/cursor-glow";
-import { TicketMetaPanel } from "@/components/ticket-meta/ticket-meta-panel";
-import { MobileMetaBar } from "@/components/ticket-meta/mobile-meta-bar";
+import { GlobalNav } from "@/components/global-nav";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -54,10 +53,7 @@ export async function generateMetadata({
     authors: [{ name: "Denis Kukobin", url: siteUrl }],
     alternates: {
       canonical: path,
-      languages: {
-        ru: "/ru",
-        en: "/en",
-      },
+      languages: { ru: "/ru", en: "/en" },
     },
     openGraph: {
       title,
@@ -77,7 +73,6 @@ export async function generateMetadata({
   };
 }
 
-/** JSON-LD Person schema — helps Google/Yandex identify this as a personal portfolio page. */
 function PersonSchema({ locale }: { locale: string }) {
   const schema = {
     "@context": "https://schema.org",
@@ -127,11 +122,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
           <CursorGlow />
-          <MobileMetaBar />
-          <div className="mx-auto w-full max-w-6xl flex-1 px-6 lg:grid lg:grid-cols-[260px_1fr] lg:gap-12 lg:px-8">
-            <TicketMetaPanel />
-            {children}
-          </div>
+          <GlobalNav />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

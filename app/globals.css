@@ -36,6 +36,43 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Noise/grain texture overlay — premium feel, pointer-events disabled */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.04;
+}
+
+/* Gradient text utility for headings */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 20%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Aurora glow animation behind hero photo */
+@keyframes aurora-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.12);
+  }
+}
+
+.aurora-glow {
+  animation: aurora-pulse 7s ease-in-out infinite;
+}
+
 @keyframes status-pulse {
   0% {
     transform: scale(1);
@@ -68,5 +105,8 @@ body {
   .status-pulse-ring {
     animation: none !important;
     display: none;
+  }
+  .aurora-glow {
+    animation: none !important;
   }
 }

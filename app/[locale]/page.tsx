@@ -1,32 +1,53 @@
-import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
-import { TitleSection } from "@/components/sections/title-section";
-import { DescriptionSection } from "@/components/sections/description-section";
-import { PreconditionsSection } from "@/components/sections/preconditions-section";
-import { StepsSection } from "@/components/sections/steps-section";
-import { ExpectedSection } from "@/components/sections/expected-section";
-import { ActualSection } from "@/components/sections/actual-section";
-import { EnvironmentSection } from "@/components/sections/environment-section";
-import { AttachmentsSection } from "@/components/sections/attachments-section";
+import { getTranslations } from "next-intl/server";
+import { LandingAnimated, type TicketCardData } from "@/components/landing/landing-animated";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export default function Home({ params }: Props) {
-  const { locale } = use(params);
+export default async function LandingPage({ params }: Props) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "landing" });
+
+  const cards: TicketCardData[] = [
+    {
+      id: t("qa.id"),
+      status: "open",
+      statusLabel: t("qa.status"),
+      title: t("qa.title"),
+      desc: t("qa.desc"),
+      tags: t.raw("qa.tags") as string[],
+      cta: t("qa.cta"),
+      href: "/qa",
+    },
+    {
+      id: t("dev.id"),
+      status: "review",
+      statusLabel: t("dev.status"),
+      title: t("dev.title"),
+      desc: t("dev.desc"),
+      tags: t.raw("dev.tags") as string[],
+      cta: t("dev.cta"),
+      href: undefined,
+    },
+    {
+      id: t("articles.id"),
+      status: "active",
+      statusLabel: t("articles.status"),
+      title: t("articles.title"),
+      desc: t("articles.desc"),
+      tags: t.raw("articles.tags") as string[],
+      cta: t("articles.cta"),
+      href: "/articles",
+    },
+  ];
+
   return (
-    <main className="flex w-full flex-col gap-4 py-10 lg:py-16">
-      <TitleSection />
-      <DescriptionSection />
-      <PreconditionsSection />
-      <StepsSection />
-      <ExpectedSection />
-      <ActualSection />
-      <EnvironmentSection />
-      <AttachmentsSection />
-    </main>
+    <div className="flex min-h-screen flex-col">
+      <LandingAnimated subtitle={t("subtitle")} cards={cards} />
+    </div>
   );
 }

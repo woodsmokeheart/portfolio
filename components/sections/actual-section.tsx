@@ -36,7 +36,7 @@ export function ActualSection() {
             delay={i * 0.08}
             className="border-t border-stroke first:border-t-0"
           >
-          <div className="-mx-2 flex min-h-[44px] flex-col gap-2 rounded-md px-2 py-4">
+          <div className="-mx-2 flex min-h-[44px] flex-col gap-2 rounded-md px-2 py-4 transition-all duration-300 hover:shadow-[0_0_20px_rgba(74,222,128,0.12)]">
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="origin-left text-base font-semibold text-text-primary lg:text-lg">
                   {item.title}

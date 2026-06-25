@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/reveal";
-import { Tag } from "@/components/ui/tag";
+import { ScrambleTag } from "@/components/ui/scramble-tag";
 
 type SectionShellProps = {
   id: string;
@@ -28,13 +28,13 @@ export function SectionShell({
       id={id}
       aria-label={title}
       className={[
-        "flex scroll-mt-24 flex-col gap-4 rounded-md border border-stroke bg-bg-elevated p-4 lg:scroll-mt-10 lg:p-6",
+        "flex scroll-mt-4 flex-col gap-4 rounded-md border border-stroke bg-bg-elevated p-4 lg:scroll-mt-4 lg:p-6",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <Tag className="self-start uppercase tracking-wider">{field}</Tag>
+      <ScrambleTag className="self-start uppercase tracking-wider">{field}</ScrambleTag>
 
       <Reveal>{children}</Reveal>
     </section>

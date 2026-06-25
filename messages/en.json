@@ -50,7 +50,7 @@
     },
     "attachments": {
       "field": "Attachments",
-      "label": "Articles & contacts"
+      "label": "Contacts"
     }
   },
   "content": {
@@ -188,7 +188,36 @@
       }
     }
   },
+  "landing": {
+    "subtitle": "Choose a section",
+    "qa": {
+      "id": "QA-001",
+      "status": "OPEN",
+      "title": "QA Portfolio",
+      "desc": "iGaming, Playwright, microservices",
+      "tags": ["6 years", "14 people", "21 services"],
+      "cta": "Open"
+    },
+    "dev": {
+      "id": "DEV-001",
+      "status": "IN REVIEW",
+      "title": "Dev Portfolio",
+      "desc": "React, Next.js, TypeScript",
+      "tags": ["frontend", "fullstack"],
+      "cta": "Coming soon"
+    },
+    "articles": {
+      "id": "ART-001",
+      "status": "ACTIVE",
+      "title": "Articles",
+      "desc": "Notes on QA and automation",
+      "tags": ["qa", "automation", "notes"],
+      "cta": "Read"
+    }
+  },
   "articles": {
+    "navLabel": "Articles",
+    "navQa": "QA Portfolio",
     "indexTitle": "Articles",
     "indexDescription": "Notes on QA, automation, and observability — no filler, no bureaucracy.",
     "backHome": "Back home",

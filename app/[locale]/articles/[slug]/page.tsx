@@ -26,11 +26,9 @@ export function generateStaticParams() {
   );
 }
 
-/** Load the requested locale, falling back to the other locale if missing. */
 function resolveArticle(slug: string, locale: Locale): Article | null {
   const requested = getArticle(slug, locale);
   if (requested) return requested;
-
   for (const fallback of routing.locales) {
     if (fallback === locale) continue;
     const article = getArticle(slug, fallback as Locale);
@@ -43,7 +41,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = resolveArticle(slug, locale as Locale);
   if (!article) return {};
-
   return {
     title: article.meta.title,
     description: article.meta.excerpt,
@@ -72,7 +69,7 @@ export default async function ArticlePage({ params }: Props) {
   const isFallback = article.meta.locale !== locale;
 
   return (
-    <main className="flex w-full flex-col gap-6 py-10 lg:py-16">
+    <main className="flex w-full flex-col gap-6">
       <Link
         href="/articles"
         className="inline-flex w-fit items-center gap-2 font-mono text-xs text-text-tertiary transition-colors hover:text-accent"
@@ -114,6 +111,39 @@ export default async function ArticlePage({ params }: Props) {
       <article className="max-w-[68ch] text-text-secondary">
         <MDXRemote source={article.content} components={mdxComponents} />
       </article>
+
+      {/* Author footer with cross-section nav */}
+      <footer className="mt-8 flex flex-col gap-4 border-t border-stroke pt-8">
+        <div className="flex flex-col gap-1">
+          <span className="font-mono text-xs uppercase tracking-wider text-text-quaternary">
+            Author
+          </span>
+          <span className="text-sm font-semibold text-text-primary">
+            Denis Kukobin
+          </span>
+          <span className="text-xs text-text-tertiary">QA Lead · SprutGaming</span>
+        </div>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/qa"
+            className="font-mono text-xs text-text-secondary transition-colors hover:text-accent"
+          >
+            → QA Portfolio
+          </Link>
+          <Link
+            href="/articles"
+            className="font-mono text-xs text-text-secondary transition-colors hover:text-accent"
+          >
+            {locale === "ru" ? "→ Все статьи" : "→ All articles"}
+          </Link>
+          <Link
+            href="/"
+            className="font-mono text-xs text-text-tertiary transition-colors hover:text-text-secondary"
+          >
+            {locale === "ru" ? "← Главная" : "← Home"}
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }

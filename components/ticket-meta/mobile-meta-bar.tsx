@@ -3,12 +3,15 @@
 import { useId, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { LangSwitcher } from "@/components/lang-switcher";
 import { SECTIONS } from "@/lib/sections";
 import { StatusBadge } from "./status-badge";
 
 const TICKET_ID = "QA-001";
 
+/**
+ * Mobile-only secondary bar for QA sections navigation.
+ * Lang and cross-section nav are handled by the GlobalNav pill above.
+ */
 export function MobileMetaBar() {
   const t = useTranslations();
   const locale = useLocale();
@@ -16,9 +19,8 @@ export function MobileMetaBar() {
   const [open, setOpen] = useState(false);
   const menuId = useId();
 
-  // On the home page anchors resolve locally; from other pages we need the full path.
-  const isHome = pathname === `/${locale}` || pathname === "/";
-  const sectionHref = (id: string) => (isHome ? `#${id}` : `/${locale}#${id}`);
+  const isQaPage = pathname === `/${locale}/qa`;
+  const sectionHref = (id: string) => (isQaPage ? `#${id}` : `/${locale}/qa#${id}`);
 
   return (
     <div
@@ -36,18 +38,15 @@ export function MobileMetaBar() {
           <StatusBadge compact />
         </div>
 
-        <div className="flex items-center gap-3">
-          <LangSwitcher />
-          <button
-            type="button"
-            aria-expanded={open}
-            aria-controls={menuId}
-            onClick={() => setOpen((v) => !v)}
-            className="rounded border border-stroke px-2.5 py-1 font-mono text-xs text-text-secondary transition-colors hover:text-text-primary"
-          >
-            {t("meta.jump")}
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={menuId}
+          onClick={() => setOpen((v) => !v)}
+          className="rounded border border-stroke px-2.5 py-1 font-mono text-xs text-text-secondary transition-colors hover:text-text-primary"
+        >
+          {t("meta.jump")}
+        </button>
       </div>
 
       {open && (

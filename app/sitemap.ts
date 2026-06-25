@@ -24,6 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: languagesFor("") },
     });
     entries.push({
+      url: `${siteUrl}/${locale}/qa`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: languagesFor("/qa") },
+    });
+    entries.push({
       url: `${siteUrl}/${locale}/articles`,
       lastModified: now,
       changeFrequency: "weekly",

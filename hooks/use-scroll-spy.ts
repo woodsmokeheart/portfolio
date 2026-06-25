@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type SpyEntry = {
   id: string;
@@ -8,75 +8,81 @@ export type SpyEntry = {
   top: number;
 };
 
-/**
- * Pure selection logic for scroll-spy: from a set of observed sections pick the
- * topmost one that is currently intersecting the viewport. Returns `null` when
- * nothing intersects so callers can decide how to fall back.
- */
+/** @deprecated use useScrollSpy directly */
 export function pickActive(entries: SpyEntry[]): string | null {
   let active: SpyEntry | null = null;
-
   for (const entry of entries) {
     if (!entry.isIntersecting) continue;
-    if (active === null || entry.top < active.top) {
-      active = entry;
-    }
+    if (active === null || entry.top < active.top) active = entry;
   }
-
   return active?.id ?? null;
 }
 
 export type UseScrollSpyOptions = {
-  /**
-   * Margin applied to the observer root. Default shifts the active region near
-   * the top of the viewport so a section becomes active as it scrolls up.
-   */
   rootMargin?: string;
 };
 
 /**
- * Tracks which of the given section ids is currently active based on scroll
- * position. SSR-safe: returns `null` until the observer runs in the browser.
+ * Scroll-spy based on scroll position rather than IntersectionObserver margins.
+ * Picks the section whose top is closest to (but not below) the viewport top.
+ * Always activates the last section when scrolled to the bottom of the page.
  */
 export function useScrollSpy(
   ids: string[],
-  options: UseScrollSpyOptions = {}
+  _options: UseScrollSpyOptions = {}
 ): string | null {
-  const { rootMargin = "-20% 0px -70% 0px" } = options;
   const [activeId, setActiveId] = useState<string | null>(null);
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    if (
-      typeof window === "undefined" ||
-      typeof IntersectionObserver === "undefined"
-    ) {
-      return;
-    }
+    if (typeof window === "undefined") return;
 
-    const elements = ids
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null);
+    const getActive = (): string | null => {
+      const scrollY = window.scrollY;
+      const viewportH = window.innerHeight;
+      const pageH = document.documentElement.scrollHeight;
 
-    if (elements.length === 0) return;
+      // If we're within 80px of the page bottom → last section wins
+      if (scrollY + viewportH >= pageH - 80) {
+        return ids[ids.length - 1] ?? null;
+      }
 
-    const observer = new IntersectionObserver(
-      (observerEntries) => {
-        const mapped: SpyEntry[] = observerEntries.map((entry) => ({
-          id: entry.target.id,
-          isIntersecting: entry.isIntersecting,
-          top: entry.boundingClientRect.top,
-        }));
+      // Find all section tops, pick the last one that has scrolled past the
+      // top third of the viewport
+      const threshold = scrollY + viewportH * 0.25;
+      let best: string | null = null;
+      let bestTop = -Infinity;
 
-        const next = pickActive(mapped);
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top + scrollY;
+        if (top <= threshold && top > bestTop) {
+          bestTop = top;
+          best = id;
+        }
+      }
+
+      return best;
+    };
+
+    const onScroll = () => {
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(() => {
+        const next = getActive();
         if (next !== null) setActiveId(next);
-      },
-      { rootMargin, threshold: 0 }
-    );
+      });
+    };
 
-    for (const element of elements) observer.observe(element);
+    // Run once on mount
+    onScroll();
 
-    return () => observer.disconnect();
-  }, [ids, rootMargin]);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+    };
+  }, [ids]);
 
   return activeId;
 }

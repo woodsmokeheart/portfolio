@@ -50,7 +50,7 @@
     },
     "attachments": {
       "field": "Attachments",
-      "label": "Статьи и контакты"
+      "label": "Контакты"
     }
   },
   "content": {
@@ -188,7 +188,36 @@
       }
     }
   },
+  "landing": {
+    "subtitle": "Выберите раздел",
+    "qa": {
+      "id": "QA-001",
+      "status": "OPEN",
+      "title": "QA Portfolio",
+      "desc": "iGaming, Playwright, микросервисы",
+      "tags": ["6 лет", "14 человек", "21 сервис"],
+      "cta": "Открыть"
+    },
+    "dev": {
+      "id": "DEV-001",
+      "status": "IN REVIEW",
+      "title": "Dev Portfolio",
+      "desc": "React, Next.js, TypeScript",
+      "tags": ["frontend", "fullstack"],
+      "cta": "Скоро"
+    },
+    "articles": {
+      "id": "ART-001",
+      "status": "ACTIVE",
+      "title": "Статьи",
+      "desc": "Заметки про QA и автоматизацию",
+      "tags": ["qa", "automation", "notes"],
+      "cta": "Читать"
+    }
+  },
   "articles": {
+    "navLabel": "Статьи",
+    "navQa": "QA Portfolio",
     "indexTitle": "Статьи",
     "indexDescription": "Заметки про QA, автоматизацию и наблюдаемость — без воды и без бюрократии.",
     "backHome": "На главную",

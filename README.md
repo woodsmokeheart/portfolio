@@ -56,9 +56,9 @@ portfolio/
 │   ├── articles/                 # article-card
 │   ├── cursor-glow.tsx
 │   └── lang-switcher.tsx
-├── lib/
-│   ├── articles.ts               # read/parse MDX frontmatter from disk
-│   ├── contacts.ts               # contact links (PLACEHOLDERS)
+    ├── lib/
+    │   ├── articles.ts               # read/parse MDX frontmatter from disk
+    │   ├── contacts.ts               # contact links (Telegram + email)
 │   ├── sections.ts               # ordered registry of the 8 ticket sections
 │   ├── site.ts                   # canonical site URL + OG image
 │   ├── format.ts                 # date formatting
@@ -128,25 +128,17 @@ All visible copy lives in **`messages/ru.json`** and **`messages/en.json`**
 Skill levels shown in skill bars and other structured data are defined in the
 relevant section components under `components/sections/`.
 
-## Personalization checklist (TODO for the owner)
+## Personalization checklist
 
-> The repo ships with clearly-marked placeholders. Before going live:
-
-- [ ] **Add a real photo** at `public/denis.jpg` (referenced by
-      `components/sections/title-section.tsx`, square ~600×600). _Currently this
-      file does not exist and will 404 until added._
-- [ ] **Set real contact links** in `lib/contacts.ts` — Telegram, email, and
-      LinkedIn `href`/`handle` are placeholders (`@your_handle`,
-      `you@example.com`, `in/your-handle`).
+- [x] **Photo** — `public/denis-photo.jpg` (hero + assignee avatar in the meta panel)
+- [x] **Contact links** — set in `lib/contacts.ts`: Telegram `@url64`, email `blckwdmayday@gmail.com`
+- [x] **OG image** — `public/og.png` (1200×630)
 - [ ] **Set `NEXT_PUBLIC_SITE_URL`** to the real domain (defaults to
       `https://deniskukobin.vercel.app` in `lib/site.ts`). This drives canonical
       URLs, the sitemap, and Open Graph URLs.
-- [ ] **Review draft copy and skill levels** in `messages/ru.json` /
-      `messages/en.json` and the section components.
-- [ ] **Add an OG image** at `public/og.png` (1200×630). _Currently missing; the
-      OG/Twitter card will not render an image until added._
 - [ ] **Add article cover images** referenced by article frontmatter `cover:`
-      (e.g. `public/articles/kafka-testing.jpg`) if you want covers.
+      (e.g. `public/articles/kafka-testing.jpg`) if you want covers — or remove
+      the `cover:` key from frontmatter to skip them.
 
 ## Deploy to Vercel
 

@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Counter } from "@/components/ui/counter";
 import { Reveal } from "@/components/ui/reveal";
 import { Tag } from "@/components/ui/tag";
+import { ScrambleTag } from "@/components/ui/scramble-tag";
 
 const LABELS = ["qa-lead", "fullstack", "playwright", "grafana"];
 
@@ -27,36 +28,43 @@ export function TitleSection() {
       id="title"
       className="flex scroll-mt-24 flex-col gap-6 rounded-md border border-stroke bg-bg-elevated p-4 lg:scroll-mt-10 lg:p-6"
     >
-      <Tag className="self-start uppercase tracking-wider text-text-quaternary">
+      <ScrambleTag className="self-start uppercase tracking-wider text-text-quaternary">
         {tField("field")}
-      </Tag>
+      </ScrambleTag>
 
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
-        <Reveal className="lg:order-2 lg:shrink-0" delay={0.1}>
-          <figure className="w-full max-w-xs overflow-hidden rounded-md border border-stroke bg-bg lg:w-56">
-            <div className="flex items-center justify-between border-b border-stroke px-3 py-1.5">
-              <span className="font-mono text-xs text-text-secondary">
-                denis.jpg
-              </span>
-              <span className="font-mono text-xs text-text-quaternary">
-                1024×1365
-              </span>
-            </div>
-            <Image
-              src="/denis-photo.jpg"
-              alt={t("name")}
-              width={1024}
-              height={1365}
-              priority
-              sizes="(min-width: 1024px) 224px, (min-width: 640px) 320px, 100vw"
-              className="h-auto w-full"
-            />
-          </figure>
-        </Reveal>
+        {/* Aurora glow + photo */}
+        <div className="relative lg:order-2 lg:shrink-0">
+          <div
+            className="aurora-glow pointer-events-none absolute -inset-6 rounded-full bg-accent/15 blur-3xl"
+            aria-hidden="true"
+          />
+          <Reveal delay={0.1}>
+            <figure className="relative w-full max-w-xs overflow-hidden rounded-md border border-stroke bg-bg lg:w-56">
+              <div className="flex items-center justify-between border-b border-stroke px-3 py-1.5">
+                <span className="font-mono text-xs text-text-secondary">
+                  denis.jpg
+                </span>
+                <span className="font-mono text-xs text-text-quaternary">
+                  1024×1365
+                </span>
+              </div>
+              <Image
+                src="/denis-photo.jpg"
+                alt={t("name")}
+                width={1024}
+                height={1365}
+                priority
+                sizes="(min-width: 1024px) 224px, (min-width: 640px) 320px, 100vw"
+                className="h-auto w-full"
+              />
+            </figure>
+          </Reveal>
+        </div>
 
         <div className="flex flex-col gap-5 lg:order-1">
           <Reveal>
-            <h1 className="text-3xl font-semibold tracking-tight text-text-primary lg:text-5xl">
+            <h1 className="gradient-text text-3xl font-semibold tracking-tight lg:text-5xl">
               {t("name")}
             </h1>
           </Reveal>
