@@ -36,9 +36,6 @@ export function EnvironmentSection() {
         <div className="grid gap-x-10 gap-y-8 lg:grid-cols-2">
           {groups.map((group) => (
             <div key={group.title} className="flex flex-col gap-4">
-              <h3 className="font-mono text-xs uppercase tracking-wider text-text-quaternary">
-                {group.title}
-              </h3>
               <div className="flex flex-col gap-4">
                 {group.skills.map((skill, i) => (
                   <Reveal key={skill.label} delay={i * 0.06}>
