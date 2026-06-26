@@ -31,7 +31,7 @@ export default async function LandingPage({ params }: Props) {
       desc: t("dev.desc"),
       tags: t.raw("dev.tags") as string[],
       cta: t("dev.cta"),
-      href: undefined,
+      href: "/dev",
     },
     {
       id: t("articles.id"),
