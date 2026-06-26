@@ -39,7 +39,7 @@ export function DevChecksSection() {
               )}
               <span className="text-sm text-text-secondary">{item.name}</span>
               <span className="ml-auto font-mono text-xs text-text-quaternary">
-                {item.status === "passed" ? "passed" : "in progress"}
+                {item.status === "passed" ? t("statusPassed") : t("statusInProgress")}
               </span>
             </div>
           </Reveal>

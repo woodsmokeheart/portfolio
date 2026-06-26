@@ -309,7 +309,9 @@
           { "name": "AI-assisted QA as a company regulation", "status": "passed" },
           { "name": "Team of 14 — onboarded 8+ specialists", "status": "passed" },
           { "name": "Open Source contributions", "status": "in-progress" }
-        ]
+        ],
+        "statusPassed": "passed",
+        "statusInProgress": "in progress"
       }
     }
   },

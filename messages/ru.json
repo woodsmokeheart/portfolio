@@ -309,7 +309,9 @@
           { "name": "AI-assisted QA как регламент компании", "status": "passed" },
           { "name": "Команда 14 человек — онбординг 8+ специалистов", "status": "passed" },
           { "name": "Open Source contributions", "status": "in-progress" }
-        ]
+        ],
+        "statusPassed": "выполнено",
+        "statusInProgress": "в процессе"
       }
     }
   },

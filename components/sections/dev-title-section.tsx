@@ -40,7 +40,7 @@ export function DevTitleSection() {
               </div>
               <Image
                 src="/denis-photo.jpg"
-                alt={t("prTitle")}
+                alt="Denis Kukobin"
                 width={1024}
                 height={1365}
                 priority
