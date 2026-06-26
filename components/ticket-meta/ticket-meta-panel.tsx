@@ -5,12 +5,15 @@ import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { LangSwitcher } from "@/components/lang-switcher";
 import { Tag } from "@/components/ui/tag";
-import { SECTIONS, sectionIds } from "@/lib/sections";
+import { SECTIONS, DEV_SECTIONS } from "@/lib/sections";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import { StatusBadge } from "./status-badge";
 
-const TICKET_ID = "QA-001";
-const LABELS = ["qa-lead", "fullstack", "playwright", "grafana"] as const;
+const QA_TICKET_ID = "QA-001";
+const PR_ID = "PR-001";
+
+const QA_LABELS = ["qa-lead", "fullstack", "playwright", "grafana"] as const;
+const DEV_LABELS = ["next.js", "typescript", "playwright", "go"] as const;
 
 function Avatar() {
   const [failed, setFailed] = useState(false);
@@ -36,25 +39,38 @@ export function TicketMetaPanel() {
   const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
-  const activeId = useScrollSpy(sectionIds());
 
   const isQaPage = pathname === `/${locale}/qa`;
-  const sectionHref = (id: string) => (isQaPage ? `#${id}` : `/${locale}/qa#${id}`);
+  const isDevPage = pathname === `/${locale}/dev`;
+
+  const sections = isDevPage ? DEV_SECTIONS : SECTIONS;
+  const activeId = useScrollSpy(sections.map((s) => s.id));
+
+  const sectionHref = (id: string) => {
+    if (isQaPage) return `#${id}`;
+    if (isDevPage) return `#${id}`;
+    return `/${locale}/qa#${id}`;
+  };
+
+  const ticketId = isDevPage ? PR_ID : QA_TICKET_ID;
+  const labels = isDevPage ? DEV_LABELS : QA_LABELS;
 
   return (
     <aside className="hidden lg:flex lg:flex-col lg:gap-6 lg:self-start lg:sticky lg:top-0 lg:max-h-screen lg:overflow-y-auto lg:pt-8 lg:pb-24 lg:pr-2">
       <div className="flex flex-col gap-2">
         <span className="font-mono text-lg font-semibold tracking-tight text-text-primary">
-          {TICKET_ID}
+          {ticketId}
         </span>
         <StatusBadge />
       </div>
 
       <div className="flex flex-col gap-1.5">
         <span className="font-mono text-xs uppercase tracking-wider text-text-tertiary">
-          {t("meta.priority")}
+          {isDevPage ? "Branch" : t("meta.priority")}
         </span>
-        <Tag className="self-start text-accent">{t("meta.priorityValue")}</Tag>
+        <Tag className="self-start text-accent">
+          {isDevPage ? "feat/fullstack" : t("meta.priorityValue")}
+        </Tag>
       </div>
 
       <div className="flex items-center gap-3">
@@ -64,13 +80,13 @@ export function TicketMetaPanel() {
             {t("meta.assigneeName")}
           </span>
           <span className="text-xs text-text-tertiary">
-            {t("meta.assigneeRole")}
+            {isDevPage ? "Fullstack Engineer" : t("meta.assigneeRole")}
           </span>
         </div>
       </div>
 
       <div className="flex flex-wrap gap-1.5">
-        {LABELS.map((label) => (
+        {labels.map((label) => (
           <Tag key={label}>{label}</Tag>
         ))}
       </div>
@@ -78,8 +94,8 @@ export function TicketMetaPanel() {
       <LangSwitcher />
 
       <nav aria-label={t("meta.jump")} className="flex flex-col gap-1 border-t border-stroke pt-5">
-        {SECTIONS.map((section) => {
-          const active = isQaPage && section.id === activeId;
+        {sections.map((section) => {
+          const active = (isQaPage || isDevPage) && section.id === activeId;
           return (
             <a
               key={section.id}
@@ -97,7 +113,6 @@ export function TicketMetaPanel() {
           );
         })}
       </nav>
-
     </aside>
   );
 }
