@@ -37,7 +37,7 @@ type NavItem =
 const NAV_ITEMS: NavItem[] = [
   { type: "link", href: "/",         icon: Home,     label: "Home",     match: (p, l) => p === `/${l}` || p === "/",          disabled: false },
   { type: "link", href: "/articles", icon: FileText,  label: "Articles", match: (p, l) => p.startsWith(`/${l}/articles`),      disabled: false },
-  { type: "link", href: "/dev",      icon: Code2,     label: "Dev",      match: () => false,                                   disabled: true  },
+  { type: "link", href: "/dev",      icon: Code2,     label: "Dev",      match: (p, l) => p.startsWith(`/${l}/dev`),           disabled: false },
   { type: "link", href: "/qa",       icon: Bug,       label: "QA",       match: (p, l) => p.startsWith(`/${l}/qa`),            disabled: false },
 ];
 
