@@ -57,104 +57,7 @@ body::before {
   padding-bottom: 0.1em;
 }
 
-/* ─── Aurora blobs ─────────────────────────────────────────────────────── */
-@keyframes aurora-float-1 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(60px, -80px) scale(1.08);
-  }
-  66% {
-    transform: translate(-40px, 50px) scale(0.95);
-  }
-}
-
-@keyframes aurora-float-2 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  40% {
-    transform: translate(-80px, 60px) scale(1.1);
-  }
-  70% {
-    transform: translate(50px, -40px) scale(0.92);
-  }
-}
-
-@keyframes aurora-float-3 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(30px, 70px) scale(1.05);
-  }
-}
-
-.aurora-blob {
-  position: absolute;
-  border-radius: 50%;
-  will-change: transform;
-  filter: blur(90px);
-}
-
-.aurora-blob-1 {
-  width: 560px;
-  height: 560px;
-  top: -120px;
-  left: -80px;
-  background: radial-gradient(
-    circle,
-    rgba(74, 222, 128, 0.14) 0%,
-    rgba(74, 222, 128, 0.04) 60%,
-    transparent 100%
-  );
-  animation: aurora-float-1 22s ease-in-out infinite;
-}
-
-.aurora-blob-2 {
-  width: 480px;
-  height: 480px;
-  bottom: -100px;
-  right: -60px;
-  background: radial-gradient(
-    circle,
-    rgba(52, 211, 153, 0.12) 0%,
-    rgba(74, 222, 128, 0.04) 55%,
-    transparent 100%
-  );
-  animation: aurora-float-2 28s ease-in-out infinite;
-}
-
-.aurora-blob-3 {
-  width: 380px;
-  height: 380px;
-  top: 35%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(74, 222, 128, 0.07) 0%,
-    transparent 70%
-  );
-  animation: aurora-float-3 18s ease-in-out infinite;
-}
-
-/* ─── Scanlines ─────────────────────────────────────────────────────────── */
-.scanlines {
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 3px,
-    rgba(0, 0, 0, 0.13) 3px,
-    rgba(0, 0, 0, 0.13) 4px
-  );
-}
-
-/* ─── Reduced motion: freeze blobs, keep scanlines ──────────────────────── */
+/* ─── Aurora glow animation behind hero photo ───────────────────────────── */
 
 /* Aurora glow animation behind hero photo */
 @keyframes aurora-pulse {
@@ -207,9 +110,6 @@ body::before {
     display: none;
   }
   .aurora-glow {
-    animation: none !important;
-  }
-  .aurora-blob {
     animation: none !important;
   }
 }
