@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Tag } from "@/components/ui/tag";
@@ -43,7 +43,20 @@ export function TicketMetaPanel() {
   const isDevPage = pathname === `/${locale}/dev`;
 
   const sections = isDevPage ? DEV_SECTIONS : SECTIONS;
-  const activeId = useScrollSpy(sections.map((s) => s.id));
+  const spyActiveId = useScrollSpy(sections.map((s) => s.id));
+
+  // Click-pin: when a nav item is clicked, override scroll-spy for 1.5s
+  // so the animation doesn't immediately snap to the wrong section.
+  const [pinnedId, setPinnedId] = useState<string | null>(null);
+  const pinTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleNavClick = (id: string) => {
+    setPinnedId(id);
+    if (pinTimerRef.current) clearTimeout(pinTimerRef.current);
+    pinTimerRef.current = setTimeout(() => setPinnedId(null), 1500);
+  };
+
+  const activeId = pinnedId ?? spyActiveId;
 
   const sectionHref = (id: string) => {
     if (isQaPage) return `#${id}`;
@@ -97,6 +110,7 @@ export function TicketMetaPanel() {
             <a
               key={section.id}
               href={sectionHref(section.id)}
+              onClick={() => handleNavClick(section.id)}
               aria-current={active ? "true" : undefined}
               className={[
                 "rounded px-2 py-1 font-mono text-xs transition-colors",

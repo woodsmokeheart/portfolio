@@ -42,14 +42,10 @@ export function useScrollSpy(
       const viewportH = window.innerHeight;
       const pageH = document.documentElement.scrollHeight;
 
-      // If we're within 80px of the page bottom → last section wins
-      if (scrollY + viewportH >= pageH - 80) {
-        return ids[ids.length - 1] ?? null;
-      }
-
-      // Find all section tops, pick the last one that has scrolled past the
-      // top third of the viewport
-      const threshold = scrollY + viewportH * 0.25;
+      // Pick the section whose top has most recently crossed 35% from the
+      // viewport top. Using 35% (up from 25%) so near-bottom sections
+      // on short pages still register before the fallback fires.
+      const threshold = scrollY + viewportH * 0.35;
       let best: string | null = null;
       let bestTop = -Infinity;
 
@@ -61,6 +57,14 @@ export function useScrollSpy(
           bestTop = top;
           best = id;
         }
+      }
+
+      // Fallback only: if no section crossed the threshold (short page /
+      // large viewport) and we are truly at the page bottom, activate the
+      // last section. Keeping this AFTER the loop prevents it from
+      // overriding the correct section when near-bottom sections are visible.
+      if (best === null && scrollY + viewportH >= pageH - 80) {
+        return ids[ids.length - 1] ?? null;
       }
 
       return best;
