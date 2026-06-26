@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { Tag } from "@/components/ui/tag";
 import { ScrambleTag } from "@/components/ui/scramble-tag";
 
-const DEV_LABELS = ["next.js", "typescript", "playwright", "go"] as const;
+const DEV_LABELS = ["react", "next.js", "typescript", "node.js"] as const;
 
 const DEV_METRICS = [
   { key: "projects", value: 8, suffix: "" },

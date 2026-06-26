@@ -12,7 +12,7 @@ const QA_TICKET_ID = "QA-001";
 const PR_ID = "PR-001";
 
 const QA_LABELS = ["qa-lead", "fullstack", "playwright", "grafana"] as const;
-const DEV_LABELS = ["next.js", "typescript", "playwright", "go"] as const;
+const DEV_LABELS = ["react", "next.js", "typescript", "node.js"] as const;
 
 function Avatar() {
   const [failed, setFailed] = useState(false);
