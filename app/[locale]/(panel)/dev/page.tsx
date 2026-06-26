@@ -24,7 +24,7 @@ export default function DevPage({ params }: Props) {
       <DevDiffSection />
       <DevCommitsSection />
       <DevChecksSection />
-      <AttachmentsSection />
+      <AttachmentsSection id="dev-attachments" />
     </main>
   );
 }

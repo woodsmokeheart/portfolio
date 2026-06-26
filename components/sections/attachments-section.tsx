@@ -9,12 +9,14 @@ const CONTACT_ICONS: Record<ContactKey, LucideIcon> = {
   email: Mail,
 };
 
-export async function AttachmentsSection() {
+type Props = { id?: string };
+
+export async function AttachmentsSection({ id = "attachments" }: Props) {
   const t = await getTranslations("content.attachments");
   const tField = await getTranslations("sections.attachments");
 
   return (
-    <SectionShell id="attachments" field={tField("field")} title={tField("label")}>
+    <SectionShell id={id} field={tField("field")} title={tField("label")}>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-3">
           <ul className="flex flex-col gap-2">
