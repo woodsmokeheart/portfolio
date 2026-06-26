@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { ogImage, siteUrl } from "@/lib/site";
 import { CursorGlow } from "@/components/cursor-glow";
+import { DotGrid } from "@/components/dot-grid";
 import { GlobalNav } from "@/components/global-nav";
 import "../globals.css";
 
@@ -136,6 +137,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
+          <DotGrid />
           <CursorGlow />
           <GlobalNav />
           {children}
