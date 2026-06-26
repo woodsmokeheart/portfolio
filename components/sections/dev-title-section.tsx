@@ -35,14 +35,14 @@ export function DevTitleSection() {
           <Reveal delay={0.1}>
             <figure className="relative w-full max-w-xs overflow-hidden rounded-md border border-stroke bg-bg lg:w-56">
               <div className="flex items-center justify-between border-b border-stroke px-3 py-1.5">
-                <span className="font-mono text-xs text-text-secondary">denis.jpg</span>
-                <span className="font-mono text-xs text-text-quaternary">1024×1365</span>
+                <span className="font-mono text-xs text-text-secondary">denis-dev.jpg</span>
+                <span className="font-mono text-xs text-text-quaternary">771×1028</span>
               </div>
               <Image
-                src="/denis-photo.jpg"
+                src="/denis-dev.jpg"
                 alt="Denis Kukobin"
-                width={1024}
-                height={1365}
+                width={771}
+                height={1028}
                 priority
                 sizes="(min-width: 1024px) 224px, (min-width: 640px) 320px, 100vw"
                 className="h-auto w-full"
