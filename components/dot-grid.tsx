@@ -1,44 +1,26 @@
 "use client";
 
 /**
- * Dot-grid background: two CSS layers, zero canvas, zero per-frame JS.
- * - Base layer: dim dots everywhere (GPU background-image, static)
- * - Highlight layer: bright dots masked to cursor position via CSS mask-image
- *   using the --glow-x / --glow-y custom properties already written by CursorGlow.
- * - Mobile (no fine pointer): base layer + subtle CSS drift animation only.
+ * Background: Aurora Blobs + Scanlines.
+ * - 3 large blurred blobs animate via CSS transform only (GPU compositor thread)
+ * - Scanlines overlay: repeating-linear-gradient, zero JS
+ * - CursorGlow sits on top and reinforces the cursor highlight
  */
 export function DotGrid() {
-  const base: React.CSSProperties = {
-    backgroundImage:
-      "radial-gradient(circle, rgba(74,222,128,0.15) 1.2px, transparent 1.2px)",
-    backgroundSize: "38px 38px",
-  };
-
-  const highlight: React.CSSProperties = {
-    backgroundImage:
-      "radial-gradient(circle, rgba(74,222,128,0.65) 1.6px, transparent 1.6px)",
-    backgroundSize: "38px 38px",
-    // Off-screen by default (-9999px) so nothing shows until CursorGlow sets the vars
-    maskImage:
-      "radial-gradient(circle 200px at var(--glow-x, -9999px) var(--glow-y, -9999px), black 0%, transparent 100%)",
-    WebkitMaskImage:
-      "radial-gradient(circle 200px at var(--glow-x, -9999px) var(--glow-y, -9999px), black 0%, transparent 100%)",
-  };
-
   return (
     <>
-      {/* Base dim grid — always visible, mobile drift animation via CSS */}
-      <div
-        aria-hidden
-        className="dot-grid-base pointer-events-none fixed inset-0 -z-20"
-        style={base}
-      />
-      {/* Bright grid — visible only near cursor via mask */}
-      <div
-        aria-hidden
-        className="pointer-events-none fixed inset-0 -z-20"
-        style={highlight}
-      />
+      {/* ── Aurora blobs ── */}
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-20 overflow-hidden">
+        {/* Blob 1 — top-left, large, primary green */}
+        <div className="aurora-blob aurora-blob-1" />
+        {/* Blob 2 — bottom-right, secondary teal-green */}
+        <div className="aurora-blob aurora-blob-2" />
+        {/* Blob 3 — centre-top, dim accent */}
+        <div className="aurora-blob aurora-blob-3" />
+      </div>
+
+      {/* ── Scanlines overlay ── */}
+      <div aria-hidden className="scanlines pointer-events-none fixed inset-0 -z-10" />
     </>
   );
 }
