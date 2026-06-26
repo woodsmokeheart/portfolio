@@ -4,6 +4,7 @@ export type Section = {
   titleKey: string;
 };
 
+/** Ordered registry of 8 QA ticket sections. Single source of truth for nav, scroll-spy, and render order. */
 export const SECTIONS: Section[] = [
   { id: "title", field: "Title", titleKey: "title" },
   { id: "description", field: "Description", titleKey: "description" },
@@ -15,6 +16,7 @@ export const SECTIONS: Section[] = [
   { id: "attachments", field: "Attachments", titleKey: "attachments" },
 ];
 
+/** Ordered registry of 7 dev portfolio (PR-metaphor) sections. */
 export const DEV_SECTIONS: Section[] = [
   { id: "dev-title", field: "PR_TITLE", titleKey: "dev.title" },
   { id: "dev-description", field: "Description", titleKey: "dev.description" },
