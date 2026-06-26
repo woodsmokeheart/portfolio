@@ -204,49 +204,49 @@
     "dev": {
       "title": {
         "badge": "merged",
-        "prTitle": "feat: fullstack engineer",
-        "headline": "Пишу код, который не ломается. А если ломается — нахожу это первым.",
+        "prTitle": "feat: frontend engineer",
+        "headline": "Строю продукты от идеи до прода. Frontend-first, остальное — по необходимости.",
         "metrics": {
-          "projects": "проектов",
+          "projects": "продуктов в проде",
           "years": "лет в коде",
           "technologies": "технологий"
         }
       },
       "description": {
-        "body": "Начинал как фронтенд-разработчик на React — код был раньше, чем QA. Сейчас веду QA в SprutGaming и параллельно строю инструменты: от Playwright-фреймворков до AI-пайплайнов. Понимаю продукт изнутри: читаю Go-сервисы, разбираюсь в Kafka-топиках, нахожу баги на уровне архитектуры, а не только UI. Инструменты под задачу, а не ради стека."
+        "body": "Начинал как фронтенд на React, параллельно работал и разработчиком, и инженером. За карьеру запустил 8+ продуктов разной сложности — от соцсетей до DEX на L2 Ethereum. Строил LLM-чат с агентами и MCP в 2024-м, когда агентный подход ещё не был мейнстримом. Умею довести продукт до релиза, а не только до пул-реквеста."
       },
       "files": {
         "projects": [
           {
-            "path": "src/projects/qa-sprint-board.tsx",
+            "path": "src/projects/papiny-skazki.tsx",
+            "additions": 2100,
+            "name": "Папины Сказки",
+            "desc": "Сервис ночных сказок с AI-генерацией: каждый день по краткому описанию нейросеть создавала новую историю. Next.js, Supabase, деплой на хостинг.",
+            "tags": ["Next.js", "Supabase", "OpenAI"],
+            "url": null
+          },
+          {
+            "path": "src/projects/llm-chat.tsx",
+            "additions": 3400,
+            "name": "LLM Chat + MCP Agents",
+            "desc": "Чат с LLM, поддержкой внешних MCP-серверов и созданием собственных агентов. Написан в 2024-м — до того, как агентный подход стал мейнстримом.",
+            "tags": ["React", "Node.js", "MCP", "LLM"],
+            "url": null
+          },
+          {
+            "path": "src/projects/dex-l2.tsx",
+            "additions": 4800,
+            "name": "DEX на L2 Ethereum",
+            "desc": "Платформа для свапа монет на собственном блокчейне второго уровня. Полный цикл: UI, интеграция с контрактами, деплой.",
+            "tags": ["React", "Web3", "Ethers.js", "L2"],
+            "url": null
+          },
+          {
+            "path": "src/projects/sprint-board.tsx",
             "additions": 1840,
-            "name": "QA Sprint Board",
-            "desc": "Дашборд QA-команды: Jira API, спринт-прогресс, метрики команды в реальном времени.",
+            "name": "Sprint Board",
+            "desc": "Командный дашборд с Jira API: спринт-прогресс, метрики и нагрузка команды в реальном времени. Используется всей компанией.",
             "tags": ["Next.js", "TypeScript", "Jira API"],
-            "url": null
-          },
-          {
-            "path": "src/projects/portfolio.tsx",
-            "additions": 3200,
-            "name": "Portfolio Site",
-            "desc": "Это портфолио: Next.js 16, next-intl, MDX-статьи, Tailwind, Framer Motion.",
-            "tags": ["Next.js", "MDX", "Tailwind"],
-            "url": null
-          },
-          {
-            "path": "src/projects/playwright-framework.tsx",
-            "additions": 960,
-            "name": "Playwright E2E Framework",
-            "desc": "Фреймворк для e2e-тестирования iGaming-платформы: Page Object, fixtures, отчёты.",
-            "tags": ["Playwright", "TypeScript", "CI/CD"],
-            "url": null
-          },
-          {
-            "path": "src/projects/llm-test-toolkit.tsx",
-            "additions": 540,
-            "name": "LLM Test Toolkit",
-            "desc": "Инструменты для тестирования LLM-чатов: верификация ответов, MCP-интеграции.",
-            "tags": ["Python", "LLM", "MCP"],
             "url": null
           }
         ]
@@ -258,56 +258,56 @@
             "skills": [
               { "label": "React / Next.js", "level": 100 },
               { "label": "TypeScript", "level": 88 },
-              { "label": "Tailwind CSS", "level": 85 },
+              { "label": "Tailwind CSS / SCSS", "level": 85 },
               { "label": "Framer Motion", "level": 75 }
             ]
           },
           {
-            "title": "Automation & Backend",
+            "title": "Backend & Web3",
             "skills": [
-              { "label": "Playwright", "level": 85 },
-              { "label": "Go (reading/debugging)", "level": 72 },
-              { "label": "Node.js / Express", "level": 78 },
-              { "label": "PostgreSQL", "level": 70 }
+              { "label": "Node.js / Express", "level": 75 },
+              { "label": "Supabase / BaaS", "level": 78 },
+              { "label": "Web3 / Ethers.js", "level": 70 },
+              { "label": "Go / Python (чтение, фикс)", "level": 60 }
             ]
           }
         ],
         "tools": [
-          "React", "Next.js", "TypeScript", "Playwright", "Vitest",
-          "Tailwind CSS", "Framer Motion", "MDX", "Kafka", "Docker",
-          "PostgreSQL", "Grafana", "Git", "Figma", "Cursor IDE"
+          "React", "Next.js", "TypeScript", "Tailwind CSS", "SCSS",
+          "Supabase", "Framer Motion", "MDX", "Node.js", "Web3",
+          "Ethers.js", "OpenAI API", "PostgreSQL", "Git", "Figma", "Cursor IDE"
         ]
       },
       "commits": {
         "items": [
           {
             "period": "2020",
-            "message": "feat: first dev job — QA + React @ VegaAvangard",
-            "detail": "CRM-система, белый ящик, параллельный фронтенд на React. Научился читать код до его запуска."
+            "message": "feat: first job — React frontend @ VegaAvangard",
+            "detail": "CRM-система на React. Первый коммерческий прод, первый реальный дедлайн — и оба пережил."
           },
           {
             "period": "2021–2024",
-            "message": "feat: DEX, LLM-chat, crypto @ Aurora Infinity",
-            "detail": "Playwright, Jest, ~70% покрытие. Написал тест-стратегии для LLM-чата и MCP-серверов там, где методик не было."
+            "message": "feat: 5+ products shipped @ Aurora Infinity",
+            "detail": "DEX на L2 Ethereum, соцсеть для крипто-инвесторов, медиа-платформа для писателей, LLM-чат с MCP-агентами. Разные стеки, один подход — довести до прода."
           },
           {
             "period": "2025",
-            "message": "feat: AI-assisted QA tooling @ SprutGaming",
-            "detail": "Автоматизация e2e iGaming-платформы: Page Object framework, Playwright + Cursor IDE + Claude. Зафиксировано как корпоративный стандарт."
+            "message": "feat: internal tooling + AI pipelines @ SprutGaming",
+            "detail": "Внутренние инструменты для команды, AI-пайплайны, автоматизация. Sprint Board стал стандартом работы всей компании."
           },
           {
             "period": "2026",
-            "message": "feat: portfolio + qa-sprint-board (this PR)",
-            "detail": "Портфолио на Next.js 16 + MDX. QA Sprint Board с Jira API. Публичное позиционирование как tech-лидера."
+            "message": "feat: this portfolio + papiny-skazki (this PR)",
+            "detail": "Портфолио на Next.js 16 + MDX. Сервис ночных сказок с AI-генерацией. Публичный выход как tech-лидера."
           }
         ]
       },
       "checks": {
         "items": [
-          { "name": "ISTQB Foundation Level", "status": "passed" },
-          { "name": "QA процессы с нуля → корпоративный стандарт", "status": "passed" },
-          { "name": "AI-assisted QA как регламент компании", "status": "passed" },
-          { "name": "Команда 14 человек — онбординг 8+ специалистов", "status": "passed" },
+          { "name": "8+ продуктов запущено в прод", "status": "passed" },
+          { "name": "Senior Frontend Engineer", "status": "passed" },
+          { "name": "LLM-агенты и MCP — до массового хайпа (2024)", "status": "passed" },
+          { "name": "DEX на собственном L2 Ethereum", "status": "passed" },
           { "name": "Open Source contributions", "status": "in-progress" }
         ],
         "statusPassed": "выполнено",
