@@ -4,14 +4,6 @@ export type Section = {
   titleKey: string;
 };
 
-/**
- * Ordered registry of the 8 ticket sections. Single source of truth for
- * navigation, scroll-spy, and rendering order.
- *
- * `field` is the monospace ticket label. `titleKey` indexes into the
- * `sections.<key>` structure in messages/ru.json & messages/en.json
- * (each key exposes `field` and `label`).
- */
 export const SECTIONS: Section[] = [
   { id: "title", field: "Title", titleKey: "title" },
   { id: "description", field: "Description", titleKey: "description" },
@@ -23,6 +15,20 @@ export const SECTIONS: Section[] = [
   { id: "attachments", field: "Attachments", titleKey: "attachments" },
 ];
 
+export const DEV_SECTIONS: Section[] = [
+  { id: "dev-title", field: "PR_TITLE", titleKey: "dev.title" },
+  { id: "dev-description", field: "Description", titleKey: "dev.description" },
+  { id: "dev-files", field: "Files Changed", titleKey: "dev.files" },
+  { id: "dev-diff", field: "Diff", titleKey: "dev.diff" },
+  { id: "dev-commits", field: "Commits", titleKey: "dev.commits" },
+  { id: "dev-checks", field: "Checks", titleKey: "dev.checks" },
+  { id: "dev-attachments", field: "Attachments", titleKey: "dev.attachments" },
+];
+
 export function sectionIds(): string[] {
-  return SECTIONS.map((section) => section.id);
+  return SECTIONS.map((s) => s.id);
+}
+
+export function devSectionIds(): string[] {
+  return DEV_SECTIONS.map((s) => s.id);
 }
