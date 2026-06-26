@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { LangSwitcher } from "@/components/lang-switcher";
 import { Tag } from "@/components/ui/tag";
 import { SECTIONS, DEV_SECTIONS } from "@/lib/sections";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
@@ -90,8 +89,6 @@ export function TicketMetaPanel() {
           <Tag key={label}>{label}</Tag>
         ))}
       </div>
-
-      <LangSwitcher />
 
       <nav aria-label={t("meta.jump")} className="flex flex-col gap-1 border-t border-stroke pt-5">
         {sections.map((section) => {
