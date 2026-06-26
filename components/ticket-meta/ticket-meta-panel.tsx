@@ -11,7 +11,7 @@ import { StatusBadge } from "./status-badge";
 const QA_TICKET_ID = "QA-001";
 const PR_ID = "PR-001";
 
-const QA_LABELS = ["qa-lead", "fullstack", "playwright", "grafana"] as const;
+const QA_LABELS = ["kafka", "grafana", "k8s", "playwright"] as const;
 const DEV_LABELS = ["react", "next.js", "typescript", "node.js"] as const;
 
 function Avatar() {

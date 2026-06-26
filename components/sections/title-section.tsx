@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { Tag } from "@/components/ui/tag";
 import { ScrambleTag } from "@/components/ui/scramble-tag";
 
-const LABELS = ["qa-lead", "fullstack", "playwright", "grafana"];
+const LABELS = ["kafka", "grafana", "k8s", "playwright"];
 
 const METRICS = [
   { key: "microservices", value: 21, suffix: "" },
