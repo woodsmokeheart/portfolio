@@ -17,7 +17,12 @@
     "priorityValue": "Highest",
     "assigneeName": "Denis Kukobin",
     "assigneeRole": "QA Lead",
-    "jump": "Sections"
+    "jump": "Sections",
+    "dev": {
+      "branch": "Branch",
+      "branchValue": "feat/fullstack",
+      "role": "Fullstack Engineer"
+    }
   },
   "sections": {
     "title": {
@@ -51,6 +56,15 @@
     "attachments": {
       "field": "Attachments",
       "label": "Contacts"
+    },
+    "dev": {
+      "title":       { "field": "PR_TITLE",      "label": "Profile" },
+      "description": { "field": "Description",   "label": "Who I am as a dev" },
+      "files":       { "field": "Files Changed", "label": "Projects" },
+      "diff":        { "field": "Diff",          "label": "Stack" },
+      "commits":     { "field": "Commits",       "label": "Experience" },
+      "checks":      { "field": "Checks",        "label": "Achievements" },
+      "attachments": { "field": "Attachments",   "label": "Contacts" }
     }
   },
   "content": {
@@ -185,6 +199,117 @@
       "contacts": {
         "telegram": "Telegram",
         "email": "Email"
+      }
+    },
+    "dev": {
+      "title": {
+        "badge": "merged",
+        "prTitle": "feat: fullstack engineer",
+        "headline": "I write code that doesn't break. And when it does — I find it first.",
+        "metrics": {
+          "projects": "projects",
+          "years": "years coding",
+          "technologies": "technologies"
+        }
+      },
+      "description": {
+        "body": "Started as a React frontend developer — code came before QA. Now I lead QA at SprutGaming while building tools on the side: Playwright frameworks, AI pipelines, internal dashboards. I understand products from the inside: I read Go services, trace Kafka topics, find bugs at the architecture level, not just in the UI. Right tool for the job, not just a stack for the resume."
+      },
+      "files": {
+        "projects": [
+          {
+            "path": "src/projects/qa-sprint-board.tsx",
+            "additions": 1840,
+            "name": "QA Sprint Board",
+            "desc": "QA team dashboard: Jira API, sprint progress, real-time team metrics.",
+            "tags": ["Next.js", "TypeScript", "Jira API"],
+            "url": null
+          },
+          {
+            "path": "src/projects/portfolio.tsx",
+            "additions": 3200,
+            "name": "Portfolio Site",
+            "desc": "This portfolio: Next.js 16, next-intl, MDX articles, Tailwind, Framer Motion.",
+            "tags": ["Next.js", "MDX", "Tailwind"],
+            "url": null
+          },
+          {
+            "path": "src/projects/playwright-framework.tsx",
+            "additions": 960,
+            "name": "Playwright E2E Framework",
+            "desc": "E2E testing framework for iGaming platform: Page Object, fixtures, reports.",
+            "tags": ["Playwright", "TypeScript", "CI/CD"],
+            "url": null
+          },
+          {
+            "path": "src/projects/llm-test-toolkit.tsx",
+            "additions": 540,
+            "name": "LLM Test Toolkit",
+            "desc": "Tools for testing LLM-chat products: response verification, MCP integrations.",
+            "tags": ["Python", "LLM", "MCP"],
+            "url": null
+          }
+        ]
+      },
+      "diff": {
+        "groups": [
+          {
+            "title": "Frontend",
+            "skills": [
+              { "label": "React / Next.js", "level": 100 },
+              { "label": "TypeScript", "level": 88 },
+              { "label": "Tailwind CSS", "level": 85 },
+              { "label": "Framer Motion", "level": 75 }
+            ]
+          },
+          {
+            "title": "Automation & Backend",
+            "skills": [
+              { "label": "Playwright", "level": 85 },
+              { "label": "Go (reading/debugging)", "level": 72 },
+              { "label": "Node.js / Express", "level": 78 },
+              { "label": "PostgreSQL", "level": 70 }
+            ]
+          }
+        ],
+        "tools": [
+          "React", "Next.js", "TypeScript", "Playwright", "Vitest",
+          "Tailwind CSS", "Framer Motion", "MDX", "Kafka", "Docker",
+          "PostgreSQL", "Grafana", "Git", "Figma", "Cursor IDE"
+        ]
+      },
+      "commits": {
+        "items": [
+          {
+            "period": "2020",
+            "message": "feat: first dev job — QA + React @ VegaAvangard",
+            "detail": "CRM system, white-box testing, parallel React frontend work. Learned to read code before running it."
+          },
+          {
+            "period": "2021–2024",
+            "message": "feat: DEX, LLM-chat, crypto @ Aurora Infinity",
+            "detail": "Playwright, Jest, ~70% coverage. Wrote test strategies for LLM-chat and MCP servers from scratch — no prior art."
+          },
+          {
+            "period": "2025",
+            "message": "feat: AI-assisted QA tooling @ SprutGaming",
+            "detail": "E2E automation for iGaming platform: Page Object framework, Playwright + Cursor IDE + Claude. Adopted as company standard."
+          },
+          {
+            "period": "2026",
+            "message": "feat: portfolio + qa-sprint-board (this PR)",
+            "detail": "Portfolio on Next.js 16 + MDX. QA Sprint Board with Jira API. Going public as a tech leader."
+          }
+        ]
+      },
+      "checks": {
+        "items": [
+          { "name": "ISTQB Foundation Level", "status": "passed" },
+          { "name": "QA process from zero → company standard", "status": "passed" },
+          { "name": "AI-assisted QA as a company regulation", "status": "passed" },
+          { "name": "Team of 14 — onboarded 8+ specialists", "status": "passed" },
+          { "name": "Open Source contributions", "status": "in-progress" }
+        ]
       }
     }
   },

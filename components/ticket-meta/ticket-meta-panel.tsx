@@ -66,10 +66,10 @@ export function TicketMetaPanel() {
 
       <div className="flex flex-col gap-1.5">
         <span className="font-mono text-xs uppercase tracking-wider text-text-tertiary">
-          {isDevPage ? "Branch" : t("meta.priority")}
+          {isDevPage ? t("meta.dev.branch") : t("meta.priority")}
         </span>
         <Tag className="self-start text-accent">
-          {isDevPage ? "feat/fullstack" : t("meta.priorityValue")}
+          {isDevPage ? t("meta.dev.branchValue") : t("meta.priorityValue")}
         </Tag>
       </div>
 
@@ -80,7 +80,7 @@ export function TicketMetaPanel() {
             {t("meta.assigneeName")}
           </span>
           <span className="text-xs text-text-tertiary">
-            {isDevPage ? "Fullstack Engineer" : t("meta.assigneeRole")}
+            {isDevPage ? t("meta.dev.role") : t("meta.assigneeRole")}
           </span>
         </div>
       </div>
