@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import { Link } from "@/i18n/navigation";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 type CardStatus = "open" | "review" | "active";
 
@@ -42,27 +42,36 @@ function scrambleFrame(target: string, progress: number): string {
 function ScrambleName({ text, className }: { text: string; className?: string }) {
   const reduced = useReducedMotion();
   const [displayed, setDisplayed] = useState(reduced ? text : "");
-  const done = useRef(false);
 
   useEffect(() => {
-    if (reduced || done.current) return;
-    done.current = true;
+    if (reduced) {
+      setDisplayed(text);
+      return;
+    }
 
-    // Small delay so fade-in animation starts first
-    const start = setTimeout(() => {
+    setDisplayed("");
+
+    let intervalId: ReturnType<typeof setInterval> | null = null;
+
+    const timeoutId = setTimeout(() => {
       let frame = 0;
-      const id = setInterval(() => {
+      intervalId = setInterval(() => {
         frame++;
         setDisplayed(scrambleFrame(text, frame / FRAMES));
         if (frame >= FRAMES) {
-          clearInterval(id);
+          clearInterval(intervalId!);
+          intervalId = null;
           setDisplayed(text);
         }
       }, FRAME_MS);
-      return () => clearInterval(id);
     }, 120);
 
-    return () => clearTimeout(start);
+    return () => {
+      clearTimeout(timeoutId);
+      if (intervalId !== null) clearInterval(intervalId);
+      // Always restore visible text if animation is interrupted
+      setDisplayed(text);
+    };
   }, [text, reduced]);
 
   return <span className={className}>{displayed || "\u00A0"}</span>;
