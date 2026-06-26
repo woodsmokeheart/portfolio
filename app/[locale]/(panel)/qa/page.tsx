@@ -18,7 +18,7 @@ export default function QaPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main className="flex w-full flex-col gap-4 py-10 lg:py-16">
+    <main className="flex w-full flex-col gap-4 py-10 lg:pt-8 lg:pb-16">
       <TitleSection />
       <DescriptionSection />
       <PreconditionsSection />
