@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Denis Kukobin — QA Lead | Senior QA Engineer",
-    "description": "Denis Kukobin — QA Lead with 6+ years of experience. iGaming platform testing, Playwright automation, microservices Go/Kafka/K8s. Senior QA engineer portfolio."
+    "title": "Denis Kukobin — QA Lead | Senior QA Engineer | Frontend Developer",
+    "description": "QA Lead with 6+ years in iGaming: 21 microservices, Playwright automation, AI-assisted testing as a company standard. Team of 14. Open to opportunities."
   },
   "nav": {
     "home": "Home",
@@ -20,8 +20,8 @@
     "jump": "Sections",
     "dev": {
       "branch": "Branch",
-      "branchValue": "feat/fullstack",
-      "role": "Fullstack Engineer"
+      "branchValue": "feat/frontend",
+      "role": "Frontend Engineer"
     }
   },
   "sections": {
@@ -70,7 +70,7 @@
   "content": {
     "title": {
       "name": "QA Engineer",
-      "headline": "QA Lead — I find what breaks the system before the users do.",
+      "headline": "I find what will kill your production — before your users do.",
       "metrics": {
         "microservices": "microservices",
         "years": "years in QA",
@@ -78,15 +78,15 @@
       }
     },
     "description": {
-      "body": "Six years in QA — still genuinely curious. Started as a React developer, so code doesn't scare me: I read pull requests and catch bugs at the requirements stage. Right now I lead QA at SprutGaming — an iGaming B2B platform: 21 microservices, Go, Kafka, Kubernetes. Team of 14. I introduced AI-assisted testing as a company standard — not as a buzzword, but because it actually works."
+      "body": "Six years in QA on products that don't forgive mistakes: iGaming, blockchain, LLM agents. Leading 14 engineers at SprutGaming — 21 microservices, Go, Kafka, payment flows with real money. Came from frontend, so I read code and find root causes — not symptoms. First in the company to introduce AI-assisted QA as a formal standard. I build quality as a system property, not a pre-release checklist."
     },
     "preconditions": {
       "items": [
-        "Came to QA from frontend (React, Next.js) — I understand how a product is built, not just how it looks from the outside.",
-        "Four years at Aurora Infinity: blockchain DEX, crypto exchanges, LLM chat — you learn to test things no textbook covers.",
-        "Then iGaming: 21 microservices, payment integrations, Go services, Kafka, K8s. Different scale, same mindset.",
-        "Introduced AI-assisted QA as a real team workflow: LLM migration verification, Cursor IDE + Claude + Figma MCP — not a pilot, now a standard.",
-        "Built QA from scratch: from no documentation to full coverage, DoD, and shift-left processes embedded in the company."
+        "I read code, not just UI — came from React/Next.js frontend. I find the root cause of a bug in minutes, not hours.",
+        "Tested non-standard products with no existing playbooks: L2 ETH DEX, LLM chat with agents, crypto platforms — wrote the approaches from zero.",
+        "iGaming scale: 21 microservices, payment integrations (crypto invoice, H2H, fiat), Go services, Kafka, Kubernetes. Bugs in payments are real money.",
+        "First in the company to introduce AI-assisted QA: LLM DB migration verification, Cursor IDE + Claude + Figma MCP. A company standard since 2025.",
+        "Built QA from scratch twice: zero coverage to full cycle — checklists, test cases, AC review, smoke + e2e, DoD — in 6 months."
       ]
     },
     "steps": {
@@ -125,36 +125,36 @@
     },
     "expected": {
       "items": [
-        "Make AI-assisted QA the default — not an exotic experiment for a few teams, but a baseline.",
-        "Shift-left into culture: quality built in at the requirements stage, not fixed with patches.",
-        "Grow people who think in risks, not just metrics.",
-        "Cut escaped defects and MTTR through observability and automation.",
-        "Give back: articles, standards, talks — because the QA community deserves to grow."
+        "Become a public voice on AI-assisted QA — it's a hot topic with almost no quality content yet.",
+        "Shift-left as a cultural norm: quality is designed into requirements, not patched after release.",
+        "Grow engineers who think in systems and risks — not ones chasing task counts.",
+        "Cut escaped defects and MTTR through observability, automation, and ownership culture.",
+        "Build teams that run without my hands-on control — because good processes scale, managers don't."
       ]
     },
     "actual": {
       "items": [
         {
-          "title": "AI-assisted QA — now a company regulation",
-          "sub": "LLM-based DB migration verification, pixel-perfect via AI, e2e with Cursor IDE + Claude and Figma MCP. Not a pilot — the team's actual workflow.",
+          "title": "AI-assisted QA — company regulation, not a pilot",
+          "sub": "LLM DB migration verification, pixel-perfect via AI, e2e with Cursor IDE + Claude and Figma MCP. Rolled out in 2025 — before it became an industry trend.",
           "tags": ["AI", "Claude", "Cursor", "Figma MCP"],
           "year": "2026"
         },
         {
-          "title": "QA from scratch: chaos → company standard",
-          "sub": "Day one: no test cases, no docs. Built checklists → test cases → AC review → smoke + e2e + DoD. Adopted across the whole company.",
+          "title": "QA department from zero to standard in 6 months",
+          "sub": "Day one: no test cases, no documentation. Result: full cycle — checklists, AC review, smoke + e2e, DoD — adopted company-wide.",
           "tags": ["Process", "Shift-left", "DoD"],
           "year": "2026"
         },
         {
-          "title": "Team of 14 from zero — and everyone stayed",
-          "sub": "Onboarded 8+ engineers (all still with the company). Led 9 core QA + 5 contractors, daily prioritization, C-level reporting.",
+          "title": "14 engineers hired — zero attrition",
+          "sub": "Onboarded 8+ engineers, all still with the company. Led 9 core QA + 5 contractors, daily prioritization, C-level reporting 3× a week.",
           "tags": ["Leadership", "Onboarding", "Reporting"],
           "year": "2026"
         },
         {
-          "title": "LLM chat: testing where no playbook exists",
-          "sub": "Streaming AI responses, MCP servers, agent tool calls, crypto subscriptions. Wrote the testing approaches for this product class from scratch.",
+          "title": "LLM product testing methodology — written from scratch",
+          "sub": "Streaming AI responses, MCP servers, agent tool calls, crypto subscriptions. No playbooks existed — built the approaches the team still uses today.",
           "tags": ["LLM", "MCP", "Crypto", "Streaming"],
           "year": "2024"
         }
@@ -204,8 +204,8 @@
     "dev": {
       "title": {
         "badge": "merged",
-        "prTitle": "feat: frontend engineer",
-        "headline": "I ship products from idea to production. Frontend-first, everything else as needed.",
+        "prTitle": "feat: senior frontend engineer",
+        "headline": "I ship products to production. Code first, everything else when needed.",
         "metrics": {
           "projects": "products shipped",
           "years": "years coding",
@@ -213,7 +213,7 @@
         }
       },
       "description": {
-        "body": "Started as a React frontend developer — code came before anything else. Over my career I've shipped 8+ products of varying complexity: social networks, a DEX on L2 Ethereum, an LLM chat with MCP agents before it was mainstream, and internal tools teams actually use. I know how to take a product to production, not just to a pull request."
+        "body": "Frontend developer who doesn't stop at 'UI is done'. 8+ products shipped to production: from social networks to a DEX on a custom L2 Ethereum. In 2024 I built an LLM chat with MCP agents — when agentic AI wasn't yet mainstream. React/Next.js is my core, Node.js backend when needed, can read and fix Go. I know what production looks like from the inside — because I've shipped there myself."
       },
       "files": {
         "projects": [
@@ -221,15 +221,15 @@
             "path": "src/projects/papiny-skazki.tsx",
             "additions": 2100,
             "name": "Papiny Skazki",
-            "desc": "Bedtime story service with AI generation: every day the neural network created a new story from a short description. Next.js, Supabase, deployed to production.",
-            "tags": ["Next.js", "Supabase", "OpenAI"],
+            "desc": "Bedtime story service for parents: the AI generates a new story every day from a short description. Next.js, Supabase, SCSS — solo from idea to deploy.",
+            "tags": ["Next.js", "Supabase", "OpenAI", "SCSS"],
             "url": null
           },
           {
             "path": "src/projects/llm-chat.tsx",
             "additions": 3400,
             "name": "LLM Chat + MCP Agents",
-            "desc": "LLM chat with support for external MCP servers and custom agent creation. Built in 2024 — before agentic AI became mainstream.",
+            "desc": "LLM chat with external MCP servers from GitHub and custom agent creation — built in 2024, a year before agentic AI became the mainstream topic.",
             "tags": ["React", "Node.js", "MCP", "LLM"],
             "url": null
           },
@@ -237,7 +237,7 @@
             "path": "src/projects/dex-l2.tsx",
             "additions": 4800,
             "name": "DEX on L2 Ethereum",
-            "desc": "Token swap platform on a custom Layer 2 blockchain. Full cycle: UI, smart contract integration, deployment.",
+            "desc": "Token swap platform on a custom Layer 2 blockchain. Full cycle: React UI, smart contract integration via Ethers.js, production deployment.",
             "tags": ["React", "Web3", "Ethers.js", "L2"],
             "url": null
           },
@@ -245,7 +245,7 @@
             "path": "src/projects/sprint-board.tsx",
             "additions": 1840,
             "name": "Sprint Board",
-            "desc": "Team dashboard with Jira API: sprint progress, metrics and workload in real time. Adopted by the entire company.",
+            "desc": "Internal dashboard with Jira API: sprint progress, team workload, real-time metrics. Built over a weekend — the whole company still uses it.",
             "tags": ["Next.js", "TypeScript", "Jira API"],
             "url": null
           }
@@ -282,32 +282,32 @@
         "items": [
           {
             "period": "2020",
-            "message": "feat: first job — React frontend @ VegaAvangard",
-            "detail": "CRM system on React. First commercial production, first real deadline — survived both."
+            "message": "feat: first commercial React app @ VegaAvangard",
+            "detail": "CRM system in React for a company that had no frontend before. First production, first real deadline — both shipped."
           },
           {
             "period": "2021–2024",
             "message": "feat: 5+ products shipped @ Aurora Infinity",
-            "detail": "DEX on L2 Ethereum, crypto investor social network, writers media platform, LLM chat with MCP agents. Different stacks, one principle — ship to production."
+            "detail": "DEX on custom L2 Ethereum, crypto investor social network, writers media platform, LLM chat with MCP agents. Each one: full cycle from design to production."
           },
           {
             "period": "2025",
-            "message": "feat: internal tooling + AI pipelines @ SprutGaming",
-            "detail": "Internal tools for the team, AI pipelines, automation. Sprint Board became the company's standard working tool."
+            "message": "feat: internal tooling + AI integrations @ SprutGaming",
+            "detail": "Sprint Board for the entire company, AI pipelines, internal tools. Projects that are actually used — not gathering dust in Confluence."
           },
           {
             "period": "2026",
-            "message": "feat: this portfolio + papiny-skazki (this PR)",
-            "detail": "Portfolio on Next.js 16 + MDX. AI bedtime story service. Going public as a tech leader."
+            "message": "feat: public tech-leader launch (this PR)",
+            "detail": "This portfolio on Next.js 16 + Framer Motion. Papiny Skazki. Going public — because it's time to build a personal brand."
           }
         ]
       },
       "checks": {
         "items": [
-          { "name": "8+ products shipped to production", "status": "passed" },
-          { "name": "Senior Frontend Engineer", "status": "passed" },
-          { "name": "LLM agents and MCP — before the mainstream hype (2024)", "status": "passed" },
-          { "name": "DEX on custom L2 Ethereum", "status": "passed" },
+          { "name": "8+ products shipped to production — solo", "status": "passed" },
+          { "name": "Senior Frontend Engineer (React, Next.js, TypeScript)", "status": "passed" },
+          { "name": "LLM agents + MCP — before the mainstream hype (2024)", "status": "passed" },
+          { "name": "DEX on custom L2 Ethereum (React + Ethers.js)", "status": "passed" },
           { "name": "Open Source contributions", "status": "in-progress" }
         ],
         "statusPassed": "passed",
@@ -321,16 +321,16 @@
       "id": "QA-001",
       "status": "OPEN",
       "title": "QA Portfolio",
-      "desc": "iGaming, Playwright, microservices",
+      "desc": "QA Lead in iGaming: 21 microservices, AI-assisted testing, team of 14",
       "tags": ["6 years", "14 people", "21 services"],
       "cta": "Open"
     },
     "dev": {
       "id": "DEV-001",
-      "status": "IN REVIEW",
+      "status": "MERGED",
       "title": "Dev Portfolio",
-      "desc": "React, Next.js, TypeScript",
-      "tags": ["frontend", "fullstack"],
+      "desc": "Frontend Engineer: 8+ products shipped, DEX on L2 ETH, LLM agents since 2024",
+      "tags": ["React", "Next.js", "Web3"],
       "cta": "Open"
     },
     "articles": {
