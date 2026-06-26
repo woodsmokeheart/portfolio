@@ -57,6 +57,26 @@ body::before {
   padding-bottom: 0.1em;
 }
 
+/* Dot-grid mobile drift — only on devices with no fine pointer (touch) */
+@keyframes dot-drift {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  33% {
+    background-position: 6px 10px;
+  }
+  66% {
+    background-position: 10px 4px;
+  }
+}
+
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  .dot-grid-base {
+    animation: dot-drift 12s ease-in-out infinite;
+  }
+}
+
 /* Aurora glow animation behind hero photo */
 @keyframes aurora-pulse {
   0%,
