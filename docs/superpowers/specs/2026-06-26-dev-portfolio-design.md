@@ -42,7 +42,7 @@ QA is mentioned on the dev page as context, not as the primary identity.
 - Subtitle: role description  
 - Stack tag pills (same `Tag` component)  
 - Metrics row: projects count / years in dev / technologies  
-- Photo: optional, same treatment as QA title  
+- Photo: included by default, same `denis.jpg` + frame treatment as QA title; can be toggled via content config  
 - Mobile: single column, metrics wrap
 
 ### 2. `DESCRIPTION` — `components/sections/dev-description-section.tsx`
